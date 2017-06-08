@@ -1,8 +1,129 @@
 {% extends 'base_layout.html' %}
 
 {% block body %}
-	<div class="jumbotron text-center">
+	
 		<h1>ESGF FORM</h1>
-		
-	</div>
+		<form action="" method="POST">
+		<div class="form-inline">
+			<label  for="inlineFormCustomSelect">Do you want to continue with <strong>esgcet</strong> installation and setup?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q1'>
+			<option selected>Yes</option>
+			<option value="1">No</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">What is your organization's id?</label>
+			<input class="form-control" type="text" value="id_value" name='q2'>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Do you wish to update, continue or simply exit?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q3'>
+			<option selected>Update</option>
+			<option value="1">Continue</option>
+			<option value="1">Exit</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Begin Installation?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q4'>
+			<option selected>Yes</option>
+			<option value="1">No</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Do you want to backup current database?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q5'>
+			<option selected>Yes</option>
+			<option value="1">No</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Create password for postgress system account:</label>
+			<input class="form-control" type="text" value="password" name='q6'>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please enter PostgresSLQ port number</label>
+			<input class="form-control" type="text" value="port number" name='q7'>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Do you want to continue with CDAT installation?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q8'>
+			<option selected>Yes</option>
+			<option value="1">No</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Do you want to continue with Tomcat installation?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q9'>
+			<option selected>Yes</option>
+			<option value="1">No</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please enter the password for this keystore:</label>
+			<input class="form-control" type="text" value="password" name='q10'>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please re-enter the password for this keystore:</label>
+			<input class="form-control" type="text" value="password" name='q11'>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Would you like to use the Distinguished Name?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q12'>
+			<option selected>Yes</option>
+			<option value="1">No</option>
+			</select>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please enter the password for this keystore:</label>
+			<input class="form-control" type="text" value="password" name='q13'>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please re-enter the password for this keystore:</label>
+			<input class="form-control" type="text" value="password" name='q14'>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please enter the password for this posgress user:</label>
+			<input class="form-control" type="text" value="password" name='q15'>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Please re-enter the password for posgress user:</label>
+			<input class="form-control" type="text" value="password" name='q16'>
+		</div>
+
+		<div class="form-inline">
+			<label for="example-text-input" class="col-2 col-form-label">Enter a single ip address which would be cleared to access admin restricted pages:</label>
+			<input class="form-control" type="text" value="ip_address" name='q17'>
+		</div>
+
+		<div class="form-group">
+			<label for="example-text-input" class="col-2 col-form-label">Enter optional ip addesses that are allowed to access admin restricted pages:</label>
+			<textarea class="form-control" rows="3" name='q18'></textarea>
+		</div>
+
+		<div class="form-inline">
+			<label class="mr-sm-2" for="inlineFormCustomSelect">Do you wish to allow more ip addresses to access admin restricted pages?</label>
+			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" name='q19'>
+			<option selected>No</option>
+			<option value="1">Yes</option>
+			</select>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
 {% endblock %}
