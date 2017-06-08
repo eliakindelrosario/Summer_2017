@@ -12,7 +12,7 @@ def index():
 # About route
 @app.route('/about')
 def about():
-	return render_template('index.html')
+	return render_template('about.html')
 
 # Questionnair route
 # Accepts GET and POST requests
