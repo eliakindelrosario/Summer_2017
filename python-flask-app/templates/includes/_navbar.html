@@ -1,20 +1,45 @@
-<nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">ESGF</a>
+<nav class="navbar"> <!-- TO FIX: Logos do not resize correctly.-->
+  <div class="container">
+    <div class="navbar-header">
+      <div class="content_wrapper"><!--// makes the footers always at the bottom of the window //-->
+        <div class="custom_header_bar">
+
+            <!--START: /cog/templates/cog/common/cog_header_custom.html-->
+            <!--This is the default custom header for ESGF-COG-->
+            <!--It contains the ESGF logo, space for welcome message or node name, and space for institutional logos.-->
+            <!--Style are location in cogstyle.css-->
+
+            <!-- control the height of the custom header by changing the value below. Both the table and the custom_header div should be
+            set to be the same height-->
+            <div style="height:42px;" class="custom_header">
+              <table style="height:42px; padding:0; margin:0; vertical-align:middle;" class="no_color">
+                <tr>
+                  <td class="hosted_by" style="width:52px; font-size:10px; font-weight:bold; font-style:italic; padding-right:1px;">
+                    Hosted by
+                  </td>
+                  <td width="80"
+                    style="text-align:left;vertical-align:middle;color:#666;">
+                    <img width="36" src="https://esgf-node.llnl.gov/mymedia/DOE_Logo.png"/>
+                    <img width="36" src="https://esgf-node.llnl.gov/mymedia/lab_icon_rgb.gif"/>
+                  </td>
+                  <td class="custom_header_location">
+                    <b>Department of Energy</b>
+                    <br/>
+                    Lawrence Livermore National Laboratory
+                  </td>
+                  <td class="powered_by">
+                    Powered by
+                  </td>
+                  <td class="custom_header_esgf_cog">
+                    <a href="https://www.earthsystemcog.org">
+                      <img style="vertical-align:middle; height:36px; margin:0;" src="https://esgf-node.llnl.gov/static/cog/img/cog_esgf_small.png" alt="ESGF logo"/>
+                    </a>
+                  </td>
+                </tr>
+            </table>
+          </div>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/questionnair">Questionnair</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
