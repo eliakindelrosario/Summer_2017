@@ -143,7 +143,7 @@
 
 		<div class="form-group">
 			<label>Do you want to continue with Tomcat installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='23'>
+			<select class="form-control" name='23' id='yesToTomcat'>
 				<option selected>Yes</option>
 				<option value="no">No</option>
 			</select>
@@ -171,8 +171,8 @@
 		<div class="form-group">
 			<label>Do you want to continue with ESGF Dashboard IP installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
 			<select class="form-control" name='26'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
+				<option selected>No</option>
+				<option value="yes">yes</option>
 			</select>
 			<small class="form-text text-muted">Sample: Pick one.</small>
 		</div>
@@ -205,22 +205,22 @@
 			<textarea class="form-control" name='31'></textarea>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" class='tomcat'>
 			<label>Please enter username for tomcat</label>
 			<input type="text" class="form-control" value="Hello" name="32">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" class='tomcat'>
 			<label>Please enter password for user</label>
 			<input type="password" class="form-control" value="password" name="33">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" class='tomcat'>
 			<label>Would you like to add another user?</label>
 			<textarea class="form-control" name='34'></textarea>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" class='tomcat'>
 			<label>Do you wish to setup the redirect to the esgf-node-manager's page? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
 			<select class="form-control" name='35'>
 				<option selected>Yes</option>
@@ -228,7 +228,7 @@
 			</select>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" class='tomcat'>
 			<label>Do you wish to generate a Certificate Signing Request at this time? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
 			<select class="form-control" name='36'>
 				<option selected>Yes</option>
