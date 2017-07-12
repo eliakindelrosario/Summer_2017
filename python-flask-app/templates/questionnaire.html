@@ -1,470 +1,431 @@
 {% extends 'base_layout.html' %}
 
 {% block body %}
-		<div class="page-header text-center">
-		<h1 >ESGF Installer Setup</h1>
-		<p class="lead" >Etiam vel risus nec nulla hendrerit rhoncus eget quis mi. Fusce nisi ante, dignissim at lacus ac, imperdiet malesuada sapien. In lobortis condimentum diam, quis molestie odio pretium eget. Praesent vitae nulla in risus ultrices interdum. Sed auctor est purus, vitae rhoncus odio efficitur a. Nunc sagittis elit enim, a bibendum erat ornare rhoncus. Aliquam at leo vel erat venenatis ultrices quis a libero. Suspendisse nec finibus neque. Nunc sem massa, euismod et metus sit amet, pharetra vulputate enim. In feugiat vitae elit id pulvinar. Suspendisse mollis lacus sem, vel eleifend dui volutpat sed.</p>
+	<div class="page-header text-center">
+	<h1 >ESGF Installer Setup</h1>
+	<p class="lead" >Etiam vel risus nec nulla hendrerit rhoncus eget quis mi. Fusce nisi ante, dignissim at lacus ac, imperdiet malesuada sapien. In lobortis condimentum diam, quis molestie odio pretium eget. Praesent vitae nulla in risus ultrices interdum. Sed auctor est purus, vitae rhoncus odio efficitur a. Nunc sagittis elit enim, a bibendum erat ornare rhoncus. Aliquam at leo vel erat venenatis ultrices quis a libero. Suspendisse nec finibus neque. Nunc sem massa, euismod et metus sit amet, pharetra vulputate enim. In feugiat vitae elit id pulvinar. Suspendisse mollis lacus sem, vel eleifend dui volutpat sed.</p>
 	</div>
+
+
 		<form action="" method="POST">
+		<!-- Page One-->
+		<div class="page active">
+			<div class="form-group">
+				<label>Please select the ESGF distribution mirror for this installation <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Disclaimer: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
+				<select class="form-control" name='1'>
+					<option selected>1.</option>
+					<option value='2'>2.</option>
+					<option value='3'>3.</option>
+					<option value='4'>4.</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Please select the ESGF distribution mirror for this installation <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Disclaimer: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
-			<select class="form-control" name='1'>
-				<option selected>1.</option>
-				<option value='2'>2.</option>
-				<option value='3'>3.</option>
-				<option value='4'>4.</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Please enter the IP address to use for this installation <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam."/></label>
+				<input type="text" class="form-control" value="000.000.000.00" name ='2'>
+			</div>
 
-		<div class="form-group">
-			<label>Please enter the IP address to use for this installation <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam."/></label>
-			<input type="text" class="form-control" value="000.000.000.00" name ='2'>
-		</div>
+			<div class="form-group">
+				<label>What is the fully qualified domain name of this node? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input type="text" class="form-control" value="I am awesome!" name ='3'>
+			</div>
 
-		<div class="form-group">
-			<label>What is the fully qualified domain name of this node? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input type="text" class="form-control" value="I am awesome!" name ='3'>
-		</div>
+			<div class="form-group">
+				<label>What is the admin password to use for this installation?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
+				<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='4'>
+			</div>
 
-		<div class="form-group">
-			<label>What is the admin password to use for this installation?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
-			<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='4'>
-		</div>
+			<div class="form-group">
+				<label>Please re-enter password:<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
+				<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='5'>
+			</div>
 
-		<div class="form-group">
-			<label>Please re-enter password:<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
-			<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='5'>
-		</div>
+			<!-- Next Button-->
+			<input type="button" value="Next" class="next">
+		</div><!-- Page one end-->
 
-		<div class="form-group">
-			<label>What is the name of your organization?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input type="text" class="form-control" value="Hercules" name='6'>
-			<small class="form-text text-muted">Sample: To be or not to be; That is the question.</small>
-		</div>
+		<!-- Page two-->
+		<div class="page">
+			<div class="form-group">
+				<label>What is the name of your organization?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input type="text" class="form-control" value="Hercules" name='6'>
+				<small class="form-text text-muted">Sample: To be or not to be; That is the question.</small>
+			</div>
 
 
-		<div class="form-group">
-			<label>Please give this node a "short" name<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input class="form-control" type="text" placeholder="Sammy" name='7'>
-			<small class="form-text text-muted">Sample: Because it well help you. </small>
-		</div>
+			<div class="form-group">
+				<label>Please give this node a "short" name<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input class="form-control" type="text" placeholder="Sammy" name='7'>
+				<small class="form-text text-muted">Sample: Because it well help you. </small>
+			</div>
 
-		<div class="form-group">
-			<label>Please give this node a more descriptive "long" name.<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input class="form-control" type="text" value="discriptivelongname" name='8'>
-		</div>
+			<div class="form-group">
+				<label>Please give this node a more descriptive "long" name.<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input class="form-control" type="text" value="discriptivelongname" name='8'>
+			</div>
 
-		<div class="form-group">
-			<label>What is the namespace to use for this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input type="text" class="form-control" placeholder="OnePiece" name='9'>
-		</div>
+			<div class="form-group">
+				<label>What is the namespace to use for this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input type="text" class="form-control" placeholder="OnePiece" name='9'>
+			</div>
 
-		<div class="form-group">
-			<label>What peer group(s) will this node participate in? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='10'>
-				<option selected>1.</option>
-				<option value="2">2.</option>
-			</select>
-			<small class="form-text text-muted">Sample: Pick one.</small>
-		</div>
+			<div class="form-group">
+				<label>What peer group(s) will this node participate in? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='10'>
+					<option selected>1.</option>
+					<option value="2">2.</option>
+				</select>
+				<small class="form-text text-muted">Sample: Pick one.</small>
+			</div>
 
-		<div class="form-group">
-			<label>What is the default peer to this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="DLorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='11'>
-				<option selected>1.</option>
-				<option value="2">2.</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>What is the default peer to this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="DLorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='11'>
+					<option selected>1.</option>
+					<option value="2">2.</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>What is the hostname of the node do you plan to publish to?</label>
-			<input class="form-control" type="text" value="Candy" name='12'>
-		</div>
+			<div class="form-group">
+				<label>What is the hostname of the node do you plan to publish to?</label>
+				<input class="form-control" type="text" value="Candy" name='12'>
+			</div>
 
-		<div class="form-group">
-			<label>What email address should notifications be sent as? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input class="form-control" type="text" value="johndoe@example.com" name='13'>
-			<small class="form-text text-muted">Distinguished Name is ...</small>
-		</div>
+			<div class="form-group">
+				<label>What email address should notifications be sent as? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input class="form-control" type="text" value="johndoe@example.com" name='13'>
+				<small class="form-text text-muted">Distinguished Name is ...</small>
+			</div>
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Next" class="next">
+		</div> <!-- Page two end-->
 
-		<div class="form-group">
-			<label>Is the database external to this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='14'>
-				<option selected>No</option>
-				<option value="Yes">Yes</option>
-			</select>
-		</div>
+		<!-- Page three-->
+		<div class="page">
+			<div class="form-group">
+				<label>Is the database external to this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='14'>
+					<option selected>No</option>
+					<option value="Yes">Yes</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>What is the database connection string? </label>
-			<input class="form-control" type="text" value="The red string of fate." name='15'>
-		</div>
+			<div class="form-group">
+				<label>What is the database connection string? </label>
+				<input class="form-control" type="text" value="The red string of fate." name='15'>
+			</div>
 
-		<div class="form-group">
-			<label>What is the (low priv) db account for publisher?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input class="form-control" type="text" value="Hunger Games!" name='16'>
-			<small class="form-text text-muted">Sample: low priv means...</small>
-		</div>
+			<div class="form-group">
+				<label>What is the (low priv) db account for publisher?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input class="form-control" type="text" value="Hunger Games!" name='16'>
+				<small class="form-text text-muted">Sample: low priv means...</small>
+			</div>
 
-		<div class="form-group">
-			<label>What is the db password for publisher user</label>
-			<input class="form-control" type="password" value="password" name='17'>
-		</div>
+			<div class="form-group">
+				<label>What is the db password for publisher user</label>
+				<input class="form-control" type="password" value="password" name='17'>
+			</div>
 
-		<div class="form-group">
-			<label>Enter password for postgres user dbsuper: <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input class="form-control" type="password" value="password" name='18'>
-		</div>
+			<div class="form-group">
+				<label>Enter password for postgres user dbsuper: <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input class="form-control" type="password" value="password" name='18'>
+			</div>
 
-		<div class="form-group">
-			<label>Re-enter password for postgres user dbsuper:
-			<input type="password" class="form-control" value="password" name="19">
-		</div>
+			<div class="form-group">
+				<label>Re-enter password for postgres user dbsuper:
+				<input type="password" class="form-control" value="password" name="19">
+			</div>
 
-		<div class="form-group">
-			<label>Please Enter PostgreSQL port number <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input type="text"  value="45679" class="form-control" name="20">
-		</div>
+			<div class="form-group">
+				<label>Please Enter PostgreSQL port number <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input type="text"  value="45679" class="form-control" name="20">
+			</div>
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Next" class="next">
+		</div> <!-- Page two end-->
 
-		<div class="form-group">
-			<label>Would you like a \"system\" or \"user\" publisher configuration <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='21'>
-				<option selected>User</option>
-				<option value="system">System</option>
-			</select>
-			<small class="form-text text-muted">Sample: Pick one.</small>
-		</div>
+		<div class="page">
+			<div class="form-group">
+				<label>Would you like a \"system\" or \"user\" publisher configuration <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='21'>
+					<option selected>User</option>
+					<option value="system">System</option>
+				</select>
+				<small class="form-text text-muted">Sample: Pick one.</small>
+			</div>
 
-		<div class="form-group">
-			<label>What is your organization's id? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input class="form-control" type="text" value="Seasoning" name='22'>
-		</div>
+			<div class="form-group">
+				<label>What is your organization's id? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input class="form-control" type="text" value="Seasoning" name='22'>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with Tomcat installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='23' id='yesToTomcat'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-			<small class="form-text text-muted">Sample: Pick one.</small>
-		</div>
+			<div class="form-group">
+				<label>Do you want to continue with Tomcat installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='23' id='yesToTomcat'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+				<small class="form-text text-muted">Sample: Pick one.</small>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with esgcet installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='24'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-			<small class="form-text text-muted">Sample: Pick one.</small>
-		</div>
+			<div class="form-group">
+				<label>Do you want to continue with esgcet installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='24'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+				<small class="form-text text-muted">Sample: Pick one.</small>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with thredds installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='25'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-			<small class="form-text text-muted">Sample: Pick one.</small>
-		</div>
+			<div class="form-group">
+				<label>Do you want to continue with thredds installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='25'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+				<small class="form-text text-muted">Sample: Pick one.</small>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with ESGF Dashboard IP installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='26'>
-				<option selected>No</option>
-				<option value="yes">yes</option>
-			</select>
-			<small class="form-text text-muted">Sample: Pick one.</small>
-		</div>
+			<div class="form-group">
+				<label>Do you want to continue with ESGF Dashboard IP installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='26'>
+					<option selected>No</option>
+					<option value="yes">yes</option>
+				</select>
+				<small class="form-text text-muted">Sample: Pick one.</small>
+			</div>
 
-		<div class="form-group">
-			<label>Would you like to use the DN: (OU=ESGF.ORG, O=ESGF) <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='27'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Would you like to use the DN: (OU=ESGF.ORG, O=ESGF) <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='27'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Please enter the password for this keystore"</label>
-			<input type="password" class="form-control" value="password" name="28">
-		</div>
+			<div class="form-group">
+				<label>Please enter the password for this keystore"</label>
+				<input type="password" class="form-control" value="password" name="28">
+			</div>
 
-		<div class="form-group">
-			<label>Re-enter password for this keystore</label>
-			<input type="password" class="form-control" value="password" name="29">
-		</div>
+			<div class="form-group">
+				<label>Re-enter password for this keystore</label>
+				<input type="password" class="form-control" value="password" name="29">
+			</div>
 
-		<div class="form-group">
-			<label>Enter a single ip address which would be cleared to access admin restricted pages. <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<input type="text"  value="000.000.000.00" class="form-control" name="30">
-		</div>
+			<div class="form-group">
+				<label>Enter a single ip address which would be cleared to access admin restricted pages. <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<input type="text"  value="000.000.000.00" class="form-control" name="30">
+			</div>
 
-		<div class="form-group">
-			<label>Do you wish to allow further ips?</label>
-			<textarea class="form-control" name='31'></textarea>
-		</div>
+			<div class="form-group">
+				<label>Do you wish to allow further ips?</label>
+				<textarea class="form-control" name='31'></textarea>
+			</div>
 
-		<div class="form-group" class='tomcat'>
-			<label>Please enter username for tomcat</label>
-			<input type="text" class="form-control" value="Hello" name="32">
-		</div>
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Next" class="next">
+		</div> <!-- Page three end-->
 
-		<div class="form-group" class='tomcat'>
-			<label>Please enter password for user</label>
-			<input type="password" class="form-control" value="password" name="33">
-		</div>
+		<!-- Page four-->
+		<div class="page">
+			<div class="form-group" class='tomcat'>
+				<label>Please enter username for tomcat</label>
+				<input type="text" class="form-control" value="Hello" name="32">
+			</div>
 
-		<div class="form-group" class='tomcat'>
-			<label>Would you like to add another user?</label>
-			<textarea class="form-control" name='34'></textarea>
-		</div>
+			<div class="form-group" class='tomcat'>
+				<label>Please enter password for user</label>
+				<input type="password" class="form-control" value="password" name="33">
+			</div>
 
-		<div class="form-group" class='tomcat'>
-			<label>Do you wish to setup the redirect to the esgf-node-manager's page? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='35'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group" class='tomcat'>
+				<label>Would you like to add another user?</label>
+				<textarea class="form-control" name='34'></textarea>
+			</div>
 
-		<div class="form-group" class='tomcat'>
-			<label>Do you wish to generate a Certificate Signing Request at this time? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='36'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group" class='tomcat'>
+				<label>Do you wish to setup the redirect to the esgf-node-manager's page? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='35'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Please Enter the IP address of this host</label>
-			<input type="text" class="form-control" value="xxxxxxxxxxxx" name='37'></input>
-		</div>
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Next" class="next">
+		</div> <!-- Page four end-->
 
-		<div class="form-group">
-			<label>Please Enter the public (i.e. routable) IP address of this host</label>
-			<input class="form-control" type="text" value="xxxxxxxxxxxx" name='38'></input>
-		</div>
+		<!-- Page five-->
+		<div class="page">
+			<div class="form-group" class='tomcat'>
+				<label>Do you wish to generate a Certificate Signing Request at this time? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='36'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Do you wish to use an external IDP peer?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-			<select class="form-control" name='39'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Please Enter the IP address of this host</label>
+				<input type="text" class="form-control" value="xxxxxxxxxxxx" name='37'></input>
+			</div>
 
-		<div class="form-group">
-			<label>Please specify your IDP peer node's FQDN:</label>
-			<input class="form-control" type="text" value="xxxxxxxxxxxx" name='40'></input>
-		</div>
+			<div class="form-group">
+				<label>Please Enter the public (i.e. routable) IP address of this host</label>
+				<input class="form-control" type="text" value="xxxxxxxxxxxx" name='38'></input>
+			</div>
 
-		<div class="form-group">
-			<label>Enter certificate to add to trusted keystore</label>
-			<input class="form-control" type="text" value="xxxxxxxxxxxx" name='41'></input>
-		</div>
+			<div class="form-group">
+				<label>Do you wish to use an external IDP peer?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<select class="form-control" name='39'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>Please specify your IDP peer node's FQDN:</label>
+				<input class="form-control" type="text" value="xxxxxxxxxxxx" name='40'></input>
+			</div>
+
+			<div class="form-group">
+				<label>Enter certificate to add to trusted keystore</label>
+				<input class="form-control" type="text" value="xxxxxxxxxxxx" name='41'></input>
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Next" class="next">
+		</div> <!-- Page five end-->
 
 									<!-- GLOBUS SETTINGS-->
-		<div class="form-group">
-			<label>Do you want to continue with the Globus installation and setup?</label>
-			<select class="form-control" name='42'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+		<div class="page">
+			<div class="form-group">
+				<label>Do you want to continue with the Globus installation and setup?</label>
+				<select class="form-control" name='42'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to register the GridFTP server with Globus?</label>
-			<select class="form-control" name='43'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Do you want to register the GridFTP server with Globus?</label>
+				<select class="form-control" name='43'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to register the MyProxy server with Globus?</label>
-			<select class="form-control" name='44'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Do you want to register the MyProxy server with Globus?</label>
+				<select class="form-control" name='44'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Please provide a Globus username</label>
-			<input class="form-control" type="text" value="CandyCrush" name='45'></input>
-		</div>
+			<div class="form-group">
+				<label>Please provide a Globus username</label>
+				<input class="form-control" type="text" value="CandyCrush" name='45'></input>
+			</div>
 
-		<div class="form-group">
-			<label>Globus password</label>
-			<input class="form-control" type="text" value="CandyCrush" name='46'></input>
-		</div>
+			<div class="form-group">
+				<label>Globus password</label>
+				<input class="form-control" type="text" value="CandyCrush" name='46'></input>
+			</div>
 
-		<div class="form-group">
-			<label>Enter password for new role</label>
-			<input class="form-control" type="password" value="password" name='47'></input>
-		</div>
+			<div class="form-group">
+				<label>Enter password for new role</label>
+				<input class="form-control" type="password" value="password" name='47'></input>
+			</div>
 
-		<div class="form-group">
-			<label>Enter it again:</label>
-			<input class="form-control" type="password" value="password" name='48'></input>
-		</div>
+			<div class="form-group">
+				<label>Enter it again:</label>
+				<input class="form-control" type="password" value="password" name='48'></input>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with openid relying party installation and setup?</label>
-			<select class="form-control" name='49'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Next" class="next">
+		</div> <!-- Page two end-->
 
-		<div class="form-group">
-			<label>Do you want to make a back up of the existing distribution?</label>
-			<select class="form-control" name='50'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+		<!-- Page six -->
+		<div class="page">
+			<div class="form-group">
+				<label>Do you want to continue with openid relying party installation and setup?</label>
+				<select class="form-control" name='49'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with security services installation and setup?</label>
-			<select class="form-control" name='51'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Do you want to make a back up of the existing distribution?</label>
+				<select class="form-control" name='50'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with idp services installation and setup?</label>
-			<select class="form-control" name='52'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
+			<div class="form-group">
+				<label>Do you want to continue with security services installation and setup?</label>
+				<select class="form-control" name='51'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<div class="form-group">
-			<label>Do you want to continue with idp services installation and setup?</label>
-			<select class="form-control" name='53'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to continue with idp services installation and setup?</label>
-			<select class="form-control" name='54'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to continue with idp services installation and setup?</label>
-			<select class="form-control" name='55'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to continue with search services installation and setup?</label>
-			<select class="form-control" name='56'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to continue with security schema setup?</label>
-			<select class="form-control" name='57'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to make a back up of the existing database schema</label>
-			<select class="form-control" name='58'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you still wish to (re)GENERATE self signed certs (and usurp what is present)?</label>
-			<select class="form-control" name='59'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to overwrite this CA?</label>
-			<select class="form-control" name='60'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Enter (simple) CA's certificate password</label>
-			<input class="form-control" type="password" value="password" name='61'></input>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to make a back up of the existing MyProxy SimpleCA (gateway)?</label>
-			<select class="form-control" name='62'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-					<!-- BREAK HERE -->
-		<div class="form-group">
-			<label>Do you wish to install a simple CA?</label>
-			<select class="form-control" name='63'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Would you like to remove the current CA setup?</label>
-			<select class="form-control" name='64'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Do you want to keep this as the CA subject</label>
-			<select class="form-control" name='65'>
-				<option selected>Yes</option>
-				<option value="no">No</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Enter the email of the CA</label>
-			<input class="form-control" type="text" value="johndoe@example.com" name='66'></input>
-		</div>
-
-		<div class="form-group">
-			<label>Enter PEM pass phrase:</label>
-			<input class="form-control" type="text" value="johndoe@example.com" name='67'></input>
-		</div>
-
-		<div class="form-group">
-			<label>please enter the password for the CA key</label>
-			<input class="form-control" type="password" value="xxxxxxxxxxxx" name='68'></input>
-		</div>
-
-		<div class="form-group">
-			<label>Enter (simple) CA's certificate password</label>
-			<input class="form-control" type="text" value="something" name='69'></input>
-		</div>
+			<div class="form-group">
+				<label>Do you want to continue with idp services installation and setup?</label>
+				<select class="form-control" name='52'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
 
+			<div class="form-group">
+				<label>Do you want to continue with search services installation and setup?</label>
+				<select class="form-control" name='56'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
 
-		<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-group">
+				<label>Do you want to continue with security schema setup?</label>
+				<select class="form-control" name='57'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>Do you want to make a back up of the existing database schema</label>
+				<select class="form-control" name='58'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>Do you still wish to (re)GENERATE self signed certs (and usurp what is present)?</label>
+				<select class="form-control" name='59'>
+					<option selected>Yes</option>
+					<option value="no">No</option>
+				</select>
+			</div>
+
+			<!-- Next and Submit Button-->
+			<input type="button" value="Prev" class="prev">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div> <!-- Page two end-->
+
+
 	</form>
 {% endblock %}
