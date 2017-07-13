@@ -3,7 +3,7 @@
 {% block body %}
 	<div class="page-header text-center">
 	<h1 >ESGF Installer Setup</h1>
-	<p class="lead" >Etiam vel risus nec nulla hendrerit rhoncus eget quis mi. Fusce nisi ante, dignissim at lacus ac, imperdiet malesuada sapien. In lobortis condimentum diam, quis molestie odio pretium eget. Praesent vitae nulla in risus ultrices interdum. Sed auctor est purus, vitae rhoncus odio efficitur a. Nunc sagittis elit enim, a bibendum erat ornare rhoncus. Aliquam at leo vel erat venenatis ultrices quis a libero. Suspendisse nec finibus neque. Nunc sem massa, euismod et metus sit amet, pharetra vulputate enim. In feugiat vitae elit id pulvinar. Suspendisse mollis lacus sem, vel eleifend dui volutpat sed.</p>
+	<p class="lead" >Etiam vel risus nec nulla hendrerit rhoncus eget quis mi. Fusce nisi ante, dignissim at lacus ac, imperdiet malesuada sapien. In lobortis condimentum diam, quis molestie odio pretium eget. </p>
 	</div>
 
 
@@ -11,7 +11,8 @@
 		<!-- Page One-->
 		<div class="page active">
 			<div class="form-group">
-				<label>Please select the ESGF distribution mirror for this installation <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Disclaimer: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
+				<label>{{ data['Set']['main'][0]['title'] }} <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+				</label>
 				<select class="form-control" name='1'>
 					<option selected>1.</option>
 					<option value='2'>2.</option>
@@ -21,27 +22,27 @@
 			</div>
 
 			<div class="form-group">
-				<label>Please enter the IP address to use for this installation <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam."/></label>
+				<label>{{ data['Set']['main'][1]['title'] }} <img src="{{ data["Helper"]['toolTipIMG']}}" height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][0]['tip'] }}/></label>
 				<input type="text" class="form-control" value="000.000.000.00" name ='2'>
 			</div>
 
 			<div class="form-group">
-				<label>What is the fully qualified domain name of this node? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['main'][2]['title'] }} <img src={{ data["Helper"]['toolTipIMG']}} height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][1]['tip'] }}/></label>
 				<input type="text" class="form-control" value="I am awesome!" name ='3'>
 			</div>
 
 			<div class="form-group">
-				<label>What is the admin password to use for this installation?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
+				<label>{{ data['Set']['main'][3]['title'] }} <img src={{ data["Helper"]['toolTipIMG']}} height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][3]['tip'] }}/></label>
 				<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='4'>
 			</div>
 
 			<div class="form-group">
-				<label>Please re-enter password:<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam. "/></label>
+				<label>{{ data['Set']['main'][4]['title'] }} <img src={{ data["Helper"]['toolTipIMG']}} height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][4]['tip'] }}/></label>
 				<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='5'>
 			</div>
 
 			<!-- Next Button-->
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div><!-- Page one end-->
 
 		<!-- Page two-->
@@ -97,8 +98,8 @@
 				<small class="form-text text-muted">Distinguished Name is ...</small>
 			</div>
 			<!-- Next and Prev Button-->
-			<input type="button" value="Prev" class="prev">
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div> <!-- Page two end-->
 
 		<!-- Page three-->
@@ -142,8 +143,8 @@
 				<input type="text"  value="45679" class="form-control" name="20">
 			</div>
 			<!-- Next and Prev Button-->
-			<input type="button" value="Prev" class="prev">
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div> <!-- Page two end-->
 
 		<div class="page">
@@ -226,8 +227,8 @@
 			</div>
 
 			<!-- Next and Prev Button-->
-			<input type="button" value="Prev" class="prev">
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div> <!-- Page three end-->
 
 		<!-- Page four-->
@@ -256,8 +257,8 @@
 			</div>
 
 			<!-- Next and Prev Button-->
-			<input type="button" value="Prev" class="prev">
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div> <!-- Page four end-->
 
 		<!-- Page five-->
@@ -299,8 +300,8 @@
 			</div>
 
 			<!-- Next and Prev Button-->
-			<input type="button" value="Prev" class="prev">
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div> <!-- Page five end-->
 
 									<!-- GLOBUS SETTINGS-->
@@ -350,8 +351,8 @@
 			</div>
 
 			<!-- Next and Prev Button-->
-			<input type="button" value="Prev" class="prev">
-			<input type="button" value="Next" class="next">
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div> <!-- Page two end-->
 
 		<!-- Page six -->
@@ -422,7 +423,7 @@
 			</div>
 
 			<!-- Next and Submit Button-->
-			<input type="button" value="Prev" class="prev">
+			<input type="button" value="Prev" class="btn btn-default prev">
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</div> <!-- Page two end-->
 
