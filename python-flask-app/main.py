@@ -21,7 +21,10 @@ def questionnaire():
 		return redirect(url_for('complete'))
 	else:
 		# display questionnaire by default
-		return render_template('questionnaire.html')
+		with open("init.json", "r") as init_data:
+			data = json.load(init_data)
+			
+		return render_template('questionnaire.html', data=data, text="Hello World")
 
 @app.route('/complete')
 def complete():
