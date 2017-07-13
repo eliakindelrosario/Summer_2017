@@ -4,6 +4,13 @@
 		"toolTipIMG": "http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg"
 	},
 
+	"Mirrors":[
+		"distrib-coffee.ipsl.jussieu.fr/pub/esgf",
+		"dist.ceda.ac.uk/esgf",
+		"aims1.llnl.gov/esgf",
+		"esg-dn2.nsc.liu.se/esgf"
+	],
+
 	"Set":{
 
 		"main":[
@@ -21,8 +28,8 @@
 			},
 			{
 				"title": "Create an admin password to use for this installation?",
-				"tip": "Strong passwords are generally mixtures of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
-			}, 
+				"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
+			},
 			{
 				"title": "Confirm Password",
 				"tip": ""
@@ -56,7 +63,7 @@
 			},
 			{
 				"title":"What is the hostname of the node do you plan to publish to?",
-				"tip": ""
+				"tip": "Example: esfg@llnl.gov"
 			},
 			{
 				"title":"What email address should notifications be sent as?",
@@ -68,7 +75,7 @@
 			{
 				"title":"Is the database external to this node?",
 				"tip": "Your database is external if it is ..."
-			}, 
+			},
 			{
 				"title":"What is the database connection string?",
 				"tip": "Your database is external if it is ..."
@@ -220,7 +227,7 @@
 			}
 		],
 
-		"openid ":[
+		"openid":[
 			{
 				"title":"Do you want to continue with openid relying party installation and setup?",
 				"tip": ""
