@@ -127,8 +127,18 @@ QUESTIONS = [
     "Do you want to make a back up of the existing database schema",
 
     "Do you still wish to (re)GENERATE self signed certs (and usurp what is present)?"]
-count = 0
-for item in QUESTIONS:
-	count = count + 1
-	print str(count) + ':' + item
-	print "\n"
+# count = 0
+# for item in QUESTIONS:
+# 	count = count + 1
+# 	print str(count) + ':' + item
+# 	print "\n"
+
+
+
+
+with open("init.json", "r") as file:
+    data = json.load(file)
+
+for x in data["Set"]["node"]:
+    print(x["title"])
+

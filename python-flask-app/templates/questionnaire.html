@@ -3,75 +3,101 @@
 {% block body %}
 	<div class="page-header text-center">
 	<h1 >ESGF Installer Setup</h1>
-	<p class="lead" >Etiam vel risus nec nulla hendrerit rhoncus eget quis mi. Fusce nisi ante, dignissim at lacus ac, imperdiet malesuada sapien. In lobortis condimentum diam, quis molestie odio pretium eget. </p>
 	</div>
 
-
 		<form action="" method="POST">
-		<!-- Page One-->
+
+										<!-- Page 1: MAIN-->
 		<div class="page active">
+			<p class="lead" >Etiam vel risus nec nulla hendrerit rhoncus eget quis mi. Fusce nisi ante, dignissim at lacus ac, imperdiet malesuada sapien. In lobortis condimentum diam, quis molestie odio pretium eget. </p>
+
 			<div class="form-group">
-				<label>{{ data['Set']['main'][0]['title'] }} <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+				<label>{{ data['Set']['main'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<select class="form-control" name='1'>
-					<option selected>1.</option>
-					<option value='2'>2.</option>
-					<option value='3'>3.</option>
-					<option value='4'>4.</option>
+				<select class="form-control" name='11'>
+					<option selected>{{ data['Mirrors'][0]}}</option>
+					<option value="{{ data['Mirrors'][1]}}">{{ data['Mirrors'][1]}}</option>
+					<option value="{{ data['Mirrors'][2]}}">{{ data['Mirrors'][2]}}</option>
+					<option value="{{ data['Mirrors'][3]}}">{{ data['Mirrors'][3]}}</option>
 				</select>
 			</div>
 
 			<div class="form-group">
-				<label>{{ data['Set']['main'][1]['title'] }} <img src="{{ data["Helper"]['toolTipIMG']}}" height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][0]['tip'] }}/></label>
-				<input type="text" class="form-control" value="000.000.000.00" name ='2'>
+				<label>{{ data['Set']['main'][1]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="LLNL" name ='2'>
 			</div>
 
 			<div class="form-group">
-				<label>{{ data['Set']['main'][2]['title'] }} <img src={{ data["Helper"]['toolTipIMG']}} height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][1]['tip'] }}/></label>
-				<input type="text" class="form-control" value="I am awesome!" name ='3'>
+				<label>{{ data['Set']['main'][2]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="8.8.8.8" name ='3'>
 			</div>
 
 			<div class="form-group">
-				<label>{{ data['Set']['main'][3]['title'] }} <img src={{ data["Helper"]['toolTipIMG']}} height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][3]['tip'] }}/></label>
-				<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='4'>
+				<label>{{ data['Set']['main'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="root" class="form-control" placeholder="xxxxxxxx" name ='4'>
 			</div>
 
 			<div class="form-group">
-				<label>{{ data['Set']['main'][4]['title'] }} <img src={{ data["Helper"]['toolTipIMG']}} height="16" width="16" data-toggle="tooltip" data-placement="right" title={{ data['Set']['main'][4]['tip'] }}/></label>
-				<input type="text" class="form-control" value="xxxxxxxxxxxx" name ='5'>
+				<label>{{ data['Set']['main'][4]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" placeholder="xxxxxxxx"  name ='5'>
+			</div>
+
+			<div class="form-group">
+				<div class="checkbox">
+			      <label>
+			        <input type="checkbox" name="special"> Use this password for all root configuration <a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+			      </label>
+			    </div>
 			</div>
 
 			<!-- Next Button-->
 			<input type="button" value="Next" class="btn btn-default next">
-		</div><!-- Page one end-->
+		</div><!-- Page 1 end-->
 
-		<!-- Page two-->
+
+										<!-- PAGE 2: NODE-->
 		<div class="page">
 			<div class="form-group">
-				<label>What is the name of your organization?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input type="text" class="form-control" value="Hercules" name='6'>
-				<small class="form-text text-muted">Sample: To be or not to be; That is the question.</small>
 			</div>
 
-
 			<div class="form-group">
-				<label>Please give this node a "short" name<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][1]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="text" placeholder="Sammy" name='7'>
-				<small class="form-text text-muted">Sample: Because it well help you. </small>
 			</div>
 
 			<div class="form-group">
-				<label>Please give this node a more descriptive "long" name.<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][2]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="text" value="discriptivelongname" name='8'>
 			</div>
 
 			<div class="form-group">
-				<label>What is the namespace to use for this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input type="text" class="form-control" placeholder="OnePiece" name='9'>
 			</div>
 
 			<div class="form-group">
-				<label>What peer group(s) will this node participate in? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][4]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<select class="form-control" name='10'>
 					<option selected>1.</option>
 					<option value="2">2.</option>
@@ -80,7 +106,9 @@
 			</div>
 
 			<div class="form-group">
-				<label>What is the default peer to this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="DLorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][5]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<select class="form-control" name='11'>
 					<option selected>1.</option>
 					<option value="2">2.</option>
@@ -88,24 +116,29 @@
 			</div>
 
 			<div class="form-group">
-				<label>What is the hostname of the node do you plan to publish to?</label>
+				<label>{{ data['Set']['node'][6]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][6]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="text" value="Candy" name='12'>
 			</div>
 
 			<div class="form-group">
-				<label>What email address should notifications be sent as? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['node'][7]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][7]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="text" value="johndoe@example.com" name='13'>
-				<small class="form-text text-muted">Distinguished Name is ...</small>
 			</div>
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		</div> <!-- Page two end-->
+		</div> <!-- Page 2 end-->
 
-		<!-- Page three-->
+										<!-- Page 3: DATABASE-->
 		<div class="page">
 			<div class="form-group">
-				<label>Is the database external to this node?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['database'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<select class="form-control" name='14'>
 					<option selected>No</option>
 					<option value="Yes">Yes</option>
@@ -113,320 +146,396 @@
 			</div>
 
 			<div class="form-group">
-				<label>What is the database connection string? </label>
+				<label>{{ data['Set']['database'][1]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="text" value="The red string of fate." name='15'>
 			</div>
 
 			<div class="form-group">
-				<label>What is the (low priv) db account for publisher?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['database'][2]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="text" value="Hunger Games!" name='16'>
-				<small class="form-text text-muted">Sample: low priv means...</small>
 			</div>
 
 			<div class="form-group">
-				<label>What is the db password for publisher user</label>
-				<input class="form-control" type="password" value="password" name='17'>
+				<label>{{ data['Set']['database'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input class="sub" class="form-control" type="password" value="password" name='17'>
 			</div>
 
 			<div class="form-group">
-				<label>Enter password for postgres user dbsuper: <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['database'][4]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input class="form-control" type="password" value="password" name='18'>
 			</div>
 
 			<div class="form-group">
-				<label>Re-enter password for postgres user dbsuper:
+				<label>{{ data['Set']['database'][5]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input type="password" class="form-control" value="password" name="19">
 			</div>
 
 			<div class="form-group">
-				<label>Please Enter PostgreSQL port number <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
+				<label>{{ data['Set']['database'][6]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][6]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input type="text"  value="45679" class="form-control" name="20">
 			</div>
+
+			<div class="form-group">
+				<label>{{ data['Set']['database'][7]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][7]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text"  value="951267317238" class="form-control" name="21">
+			</div>
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		</div> <!-- Page two end-->
+		</div> <!-- Page 3 end-->
 
+										<!-- Page 4: TOMCAT-->
 		<div class="page">
 			<div class="form-group">
-				<label>Would you like a \"system\" or \"user\" publisher configuration <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='21'>
-					<option selected>User</option>
-					<option value="system">System</option>
-				</select>
-				<small class="form-text text-muted">Sample: Pick one.</small>
+				<label>{{ data['Set']['tomcat'][0]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="22" id="inlineRadio1" value="option1"> 1
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="22" id="inlineRadio2" value="option2"> 2
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
-				<label>What is your organization's id? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<input class="form-control" type="text" value="Seasoning" name='22'>
+				<label>{{ data['Set']['tomcat'][1]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text"  value="Micheal" class="form-control" name="23">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to continue with Tomcat installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='23' id='yesToTomcat'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-				<small class="form-text text-muted">Sample: Pick one.</small>
+				<label>{{ data['Set']['tomcat'][2]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text"  value="951267317238" class="form-control" name="24">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to continue with esgcet installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='24'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-				<small class="form-text text-muted">Sample: Pick one.</small>
+				<label>{{ data['Set']['tomcat'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text"  value="951267317238" class="form-control" name="25">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to continue with thredds installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='25'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-				<small class="form-text text-muted">Sample: Pick one.</small>
-			</div>
-
-			<div class="form-group">
-				<label>Do you want to continue with ESGF Dashboard IP installation and setup? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='26'>
-					<option selected>No</option>
-					<option value="yes">yes</option>
-				</select>
-				<small class="form-text text-muted">Sample: Pick one.</small>
-			</div>
-
-			<div class="form-group">
-				<label>Would you like to use the DN: (OU=ESGF.ORG, O=ESGF) <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='27'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-			</div>
-
-			<div class="form-group">
-				<label>Please enter the password for this keystore"</label>
-				<input type="password" class="form-control" value="password" name="28">
-			</div>
-
-			<div class="form-group">
-				<label>Re-enter password for this keystore</label>
-				<input type="password" class="form-control" value="password" name="29">
-			</div>
-
-			<div class="form-group">
-				<label>Enter a single ip address which would be cleared to access admin restricted pages. <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<input type="text"  value="000.000.000.00" class="form-control" name="30">
-			</div>
-
-			<div class="form-group">
-				<label>Do you wish to allow further ips?</label>
-				<textarea class="form-control" name='31'></textarea>
+				<label>{{ data['Set']['tomcat'][4]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text"  value="951267317238" class="form-control" name="26">
 			</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		</div> <!-- Page three end-->
+		</div> <!-- Page FOUR end-->
 
-		<!-- Page four-->
+										<!-- Page 5: ESGCET-->
 		<div class="page">
-			<div class="form-group" class='tomcat'>
-				<label>Please enter username for tomcat</label>
+			<div class="form-group">
+				<label>{{ data['Set']['esgcet'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['esgcet'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="27">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 5 end-->
+
+										<!-- Page 6: THREDDS-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['thredds'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['thredds'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="28">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 6 end-->
+
+
+										<!-- Page 7: DASHBOARD-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['dashboard'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['dashboard'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="29">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page seven end-->
+
+										<!-- Page 8: DOMAINNAME-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['domainName'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="30">
+			</div>
+
+			<div class="form-group">
+				<label>{{ data['Set']['domainName'][1]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="31">
+			</div>
+
+			<div class="form-group">
+				<label>{{ data['Set']['domainName'][2]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
 				<input type="text" class="form-control" value="Hello" name="32">
 			</div>
 
-			<div class="form-group" class='tomcat'>
-				<label>Please enter password for user</label>
-				<input type="password" class="form-control" value="password" name="33">
+			<div class="form-group">
+				<label>{{ data['Set']['domainName'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="33">
 			</div>
 
-			<div class="form-group" class='tomcat'>
-				<label>Would you like to add another user?</label>
-				<textarea class="form-control" name='34'></textarea>
-			</div>
-
-			<div class="form-group" class='tomcat'>
-				<label>Do you wish to setup the redirect to the esgf-node-manager's page? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='35'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+			<div class="form-group">
+				<label>{{ data['Set']['domainName'][4]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="34">
 			</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		</div> <!-- Page four end-->
+		</div> <!-- Page 8 end-->
 
-		<!-- Page five-->
+									<!-- Page 9: CERTIFICATE-->
 		<div class="page">
-			<div class="form-group" class='tomcat'>
-				<label>Do you wish to generate a Certificate Signing Request at this time? <img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='36'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+			<div class="form-group">
+				<label>{{ data['Set']['certificate'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="35">
 			</div>
 
 			<div class="form-group">
-				<label>Please Enter the IP address of this host</label>
-				<input type="text" class="form-control" value="xxxxxxxxxxxx" name='37'></input>
+				<label>{{ data['Set']['certificate'][1]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="36">
 			</div>
 
 			<div class="form-group">
-				<label>Please Enter the public (i.e. routable) IP address of this host</label>
-				<input class="form-control" type="text" value="xxxxxxxxxxxx" name='38'></input>
+				<label>{{ data['Set']['certificate'][2]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="37">
 			</div>
 
 			<div class="form-group">
-				<label>Do you wish to use an external IDP peer?<img src="http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg" height="16" width="16" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis consectetur massa eu feugiat. Nam eu felis tempus, porttitor nunc eu, lobortis enim. Maecenas placerat elit ac arcu ultrices aliquam.  "/></label>
-				<select class="form-control" name='39'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['certificate'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="38">
 			</div>
 
 			<div class="form-group">
-				<label>Please specify your IDP peer node's FQDN:</label>
-				<input class="form-control" type="text" value="xxxxxxxxxxxx" name='40'></input>
+				<label>{{ data['Set']['certificate'][4]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="39">
 			</div>
 
 			<div class="form-group">
-				<label>Enter certificate to add to trusted keystore</label>
-				<input class="form-control" type="text" value="xxxxxxxxxxxx" name='41'></input>
+				<label>{{ data['Set']['certificate'][5]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="40">
 			</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		</div> <!-- Page five end-->
+		</div> <!-- Page nine end-->
 
-									<!-- GLOBUS SETTINGS-->
+										<!-- Page 10: GLOBUS -->
 		<div class="page">
 			<div class="form-group">
-				<label>Do you want to continue with the Globus installation and setup?</label>
-				<select class="form-control" name='42'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['globus'][0]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="41">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to register the GridFTP server with Globus?</label>
-				<select class="form-control" name='43'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['globus'][1]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="42">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to register the MyProxy server with Globus?</label>
-				<select class="form-control" name='44'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['globus'][2]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="43">
 			</div>
 
 			<div class="form-group">
-				<label>Please provide a Globus username</label>
-				<input class="form-control" type="text" value="CandyCrush" name='45'></input>
+				<label>{{ data['Set']['globus'][3]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="44">
 			</div>
 
 			<div class="form-group">
-				<label>Globus password</label>
-				<input class="form-control" type="text" value="CandyCrush" name='46'></input>
+				<label>{{ data['Set']['globus'][4]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="45">
 			</div>
 
 			<div class="form-group">
-				<label>Enter password for new role</label>
-				<input class="form-control" type="password" value="password" name='47'></input>
-			</div>
-
-			<div class="form-group">
-				<label>Enter it again:</label>
-				<input class="form-control" type="password" value="password" name='48'></input>
+				<label>{{ data['Set']['globus'][5]['title'] }}
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="46">
 			</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		</div> <!-- Page two end-->
+		</div> <!-- Page 10 end-->
 
-		<!-- Page six -->
+									<!-- Page 11: OPENID-->
 		<div class="page">
 			<div class="form-group">
-				<label>Do you want to continue with openid relying party installation and setup?</label>
-				<select class="form-control" name='49'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['openid'][0]['title'] }}
+					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['openid'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="47">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to make a back up of the existing distribution?</label>
-				<select class="form-control" name='50'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['openid'][1]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['openid'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="48">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 11 end-->
+
+									<!-- Page 12: SECURITY-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['security'][0]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="49">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 12 end-->
+
+										<!-- Page 13: IDP-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['idp'][0]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['idp'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="50">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 13 end-->
+
+										<!-- Page 14: SEARCH-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['search'][0]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['search'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="51">
+			</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 14 end-->
+
+										<!-- Page 15: SECURITY_SCHEMA-->
+		<div class="page">
+			<div class="form-group">
+				<label>{{ data['Set']['security_schema'][0]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security_schema'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="52">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to continue with security services installation and setup?</label>
-				<select class="form-control" name='51'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['security_schema'][1]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security_schema'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="53">
 			</div>
 
 			<div class="form-group">
-				<label>Do you want to continue with idp services installation and setup?</label>
-				<select class="form-control" name='52'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['security_schema'][2]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security_schema'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="54">
 			</div>
 
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div> <!-- Page 15 end-->
 
+										<!-- Page 16: CERTS-->
+		<div class="page">
 			<div class="form-group">
-				<label>Do you want to continue with search services installation and setup?</label>
-				<select class="form-control" name='56'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-			</div>
-
-			<div class="form-group">
-				<label>Do you want to continue with security schema setup?</label>
-				<select class="form-control" name='57'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-			</div>
-
-			<div class="form-group">
-				<label>Do you want to make a back up of the existing database schema</label>
-				<select class="form-control" name='58'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
-			</div>
-
-			<div class="form-group">
-				<label>Do you still wish to (re)GENERATE self signed certs (and usurp what is present)?</label>
-				<select class="form-control" name='59'>
-					<option selected>Yes</option>
-					<option value="no">No</option>
-				</select>
+				<label>{{ data['Set']['certs'][0]['title'] }} 
+				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certs'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				</label>
+				<input type="text" class="form-control" value="Hello" name="55">
 			</div>
 
 			<!-- Next and Submit Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<button type="submit" class="btn btn-primary">Submit</button>
-		</div> <!-- Page two end-->
-
+		</div> <!-- Page 16 end-->
 
 	</form>
 {% endblock %}
