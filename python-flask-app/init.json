@@ -1,0 +1,280 @@
+{
+	"Helper":
+	{
+		"toolTipIMG": "http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg"
+	},
+
+	"Set":{
+
+		"main":[
+			{
+				"title": "Select an ESGF distribution mirror for this installation",
+				"tip": "The distribution mirrors are ordered from 'fastest' to 'slowest'."
+			},
+			{
+				"title": "What is the name of your organization?",
+				"tip": "Example: >> Name of organization: LLNL <<"
+			},
+			{
+				"title": "Please select the IP address to use for this installation",
+				"tip": "Example: >> IP Address: 8.8.8.8 <<"
+			},
+			{
+				"title": "Create an admin password to use for this installation?",
+				"tip": "Strong passwords are generally mixtures of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
+			}, 
+			{
+				"title": "Confirm Password",
+				"tip": ""
+			}
+		],
+
+		"node":[
+			{
+				"title":"Enter a fully qualified domain name for this node?",
+				"tip": "A fully quilified doamin is ... Example: llnl.gov."
+			},
+			{
+				"title":"Please give this node a \"short\" name",
+				"tip": ""
+			},
+			{
+				"title":"Please give this node a more descriptive \"long\" name",
+				"tip": ""
+			},
+			{
+				"title":"What is the namespace to use for this node?",
+				"tip": ""
+			},
+			{
+				"title":"What peer group(s) will this node participate in?",
+				"tip": ""
+			},
+			{
+				"title":"What is the default peer to this node?",
+				"tip": ""
+			},
+			{
+				"title":"What is the hostname of the node do you plan to publish to?",
+				"tip": ""
+			},
+			{
+				"title":"What email address should notifications be sent as?",
+				"tip": ""
+			}
+		],
+
+		"database":[
+			{
+				"title":"Is the database external to this node?",
+				"tip": "Your database is external if it is ..."
+			}, 
+			{
+				"title":"What is the database connection string?",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"title":"What is the (low priv) db account for publisher?",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"title":"What is the db password for publisher user",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"title":"Enter password for postgres user dbsuper:",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"title":"Confirm password for postgres user dbsuper:",
+				"tip": ""
+			},
+			{
+				"title":"Please Enter PostgreSQL port number",
+				"tip": ""
+			},
+			{
+				"title":"What is your organization's id?",
+				"tip": ""
+			}
+		],
+
+		"tomcat":[
+			{
+				"title":"Do you want to continue with Tomcat installation and setup?",
+				"tip": ""
+			},
+			{
+				"title":"Please enter username for tomcat",
+				"tip": ""
+			},
+			{
+				"title":"Please enter password for user",
+				"tip": ""
+			},
+			{
+				"title":"Would you like to add another user?",
+				"tip": ""
+			},
+			{
+				"title":"Do you wish to setup the redirect to the esgf-node-manager's page?",
+				"tip": ""
+			}
+		],
+
+		"esgcet":[
+			{
+				"title":"Do you want to continue with esgcet installation and setup?",
+				"tip": ""
+			}
+		],
+
+		"thredds":[
+			{
+				"title":"Do you want to continue with thredds installation and setup?",
+				"tip": ""
+			}
+		],
+
+		"dashboard":[
+			{
+				"title":"Do you want to continue with ESGF Dashboard IP installation and setup?",
+				"tip": ""
+			}
+		],
+
+		"domainName":[
+			{
+				"title":"Would you like to use the DN: (OU=ESGF.ORG, O=ESGF)",
+				"tip": ""
+			},
+			{
+				"title":"Please enter the password for this keystore",
+				"tip": ""
+			},
+			{
+				"title":"Please re-enter the password for this keystore",
+				"tip": ""
+			},
+			{
+				"title":"Enter a single ip address which would be cleared to access admin restricted pages.",
+				"tip": ""
+			},
+			{
+				"title":"Do you wish to allow further ips?",
+				"tip": ""
+			}
+		],
+
+		"certificate":[
+			{
+				"title":"Do you wish to generate a Certificate Signing Request at this time?",
+				"tip": ""
+			},
+			{
+				"title":"Please Enter the IP address of this host",
+				"tip": ""
+			},
+			{
+				"title":"Please Enter the public (i.e. routable) IP address of this host",
+				"tip": ""
+			},
+			{
+				"title":"Do you wish to use an external IDP peer?",
+				"tip": ""
+			},
+			{
+				"title":"Please specify your IDP peer node's FQDN:",
+				"tip": ""
+			},
+			{
+				"title":"Enter certificate to add to trusted keystore",
+				"tip": ""
+			}
+		],
+
+		"globus":[
+			{
+				"title":"Do you want to continue with the Globus installation and setup?",
+				"tip": ""
+			},
+			{
+				"title":"Do you want to make a back up of the existing Globus distribution (datanode)?",
+				"tip": ""
+			},
+			{
+				"title":"Do you want to register the GridFTP server with Globus?",
+				"tip": ""
+			},
+			{
+				"title":"Do you want to register the MyProxy server with Globus?",
+				"tip": ""
+			},
+			{
+				"title":"Please provide a Globus username",
+				"tip": ""
+			},
+			{
+				"title":"Globus password",
+				"tip": ""
+			}
+		],
+
+		"openid ":[
+			{
+				"title":"Do you want to continue with openid relying party installation and setup?",
+				"tip": ""
+			},
+			{
+				"title":"Do you want to make a back up of the existing distribution?",
+				"tip": ""
+			}
+		],
+
+		"security":[
+			{
+				"title":"Do you want to continue with security services installation and setup?",
+				"tip": ""
+			}
+
+		],
+
+		"idp":[
+			{
+				"title":"Do you want to continue with idp services installation and setup?",
+				"tip": ""
+			}
+
+		],
+
+		"search":[
+			{
+				"title":"Do you want to continue with search services installation and setup?",
+				"tip": ""
+			}
+
+		],
+
+		"security_schema":[
+			{
+				"title":"Do you want to continue with security schema setup?",
+				"tip": ""
+			},
+			{
+				"title":"Do you want to make a back up of the existing database schema",
+				"tip": ""
+			},
+			{
+				"title":"Do you want to continue with security schema setup?",
+				"tip": ""
+			}
+		],
+
+		"certs":[
+			{
+				"title":"Do you still wish to (re)GENERATE self signed certs (and usurp what is present)?",
+				"tip": ""
+			}
+		]
+	}
+}
