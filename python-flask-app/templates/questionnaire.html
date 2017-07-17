@@ -54,7 +54,7 @@
 			<div class="form-group">
 				<div class="checkbox">
 			      <label>
-			        <input type="checkbox" name="special"> Use this password for all root configuration <a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+			        <input type="checkbox" class="password_handler" name="special"> Use this password for all root configuration <a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 			      </label>
 			    </div>
 			</div>
@@ -199,21 +199,21 @@
 				<input class="form-control" type="text" value="Hunger Games!" name='low_priv_acc'>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['database'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
 				<input class="form-control" type="password" value="password" name='postgress_password_urs'>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['database'][4]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
 				<input class="form-control" type="password" value="password" name='postgress_password'>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['database'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
@@ -263,7 +263,7 @@
 				<input type="text"  value="Micheal" class="form-control" name="tomcat_urs">
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['tomcat'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
@@ -395,14 +395,14 @@
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="hide_pass" class="form-group">
 				<label>{{ data['Set']['domainName'][1]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
 				<input type="password" class="form-control" value="password" name="keystore_pass">
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="hide_pass" class="form-group">
 				<label>{{ data['Set']['domainName'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
@@ -577,7 +577,7 @@
 				<input type="text" class="form-control" value="Thor" name="globus_usr">
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="hide_pass" class="form-group">
 				<label>{{ data['Set']['globus'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
