@@ -202,19 +202,19 @@
 
 		"globus":[
 			{
-				"title":"Do you want to continue with the Globus installation and setup?",
+				"title":"Allow Globus installation and setup?",
 				"tip": ""
 			},
 			{
-				"title":"Do you want to make a back up of the existing Globus distribution (datanode)?",
+				"title":"Make a backup of the existing Globus distribution (datanode)?",
 				"tip": ""
 			},
 			{
-				"title":"Do you want to register the GridFTP server with Globus?",
+				"title":"Register the GridFTP server with Globus?",
 				"tip": ""
 			},
 			{
-				"title":"Do you want to register the MyProxy server with Globus?",
+				"title":"Register the MyProxy server with Globus?",
 				"tip": ""
 			},
 			{
@@ -229,18 +229,18 @@
 
 		"openid":[
 			{
-				"title":"Do you want to continue with openid relying party installation and setup?",
+				"title":"Allow openid relying party installation and setup?",
 				"tip": ""
 			},
 			{
-				"title":"Do you want to make a back up of the existing distribution?",
+				"title":"Make a backup of the existing distribution?",
 				"tip": ""
 			}
 		],
 
 		"security":[
 			{
-				"title":"Do you want to continue with security services installation and setup?",
+				"title":"Allow security services installation and setup?",
 				"tip": ""
 			}
 
@@ -248,7 +248,7 @@
 
 		"idp":[
 			{
-				"title":"Do you want to continue with idp services installation and setup?",
+				"title":"Allow idp services installation and setup?",
 				"tip": ""
 			}
 
@@ -256,7 +256,7 @@
 
 		"search":[
 			{
-				"title":"Do you want to continue with search services installation and setup?",
+				"title":"Allow search services installation and setup?",
 				"tip": ""
 			}
 
@@ -264,22 +264,18 @@
 
 		"security_schema":[
 			{
-				"title":"Do you want to continue with security schema setup?",
+				"title":"Allow security schema setup?",
 				"tip": ""
 			},
 			{
-				"title":"Do you want to make a back up of the existing database schema",
-				"tip": ""
-			},
-			{
-				"title":"Do you want to continue with security schema setup?",
+				"title":"Make a backup of the existing database schema",
 				"tip": ""
 			}
 		],
 
 		"certs":[
 			{
-				"title":"Do you still wish to (re)GENERATE self signed certs (and usurp what is present)?",
+				"title":"Do you wish to (re)GENERATE self signed certs (and usurp what is present)?",
 				"tip": ""
 			}
 		]
