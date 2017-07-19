@@ -27,14 +27,14 @@
 				<label>{{ data['Set']['main'][1]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="LLNL" name ='organization_name'>
+				<input type="text" class="form-control" placeholder="LLNL" name ='organization_name'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['main'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="8.8.8.8" name ='Installation_IP'>
+				<input type="text" class="form-control" placeholder="8.8.8.8" name ='Installation_IP'>
 			</div>
 
 			<div class="form-group">
@@ -70,7 +70,7 @@
 				<label>{{ data['Set']['node'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hercules" name='qualified_DN'>
+				<input type="text" class="form-control" placeholder="Hercules" name='qualified_DN'>
 			</div>
 
 			<div class="form-group">
@@ -84,7 +84,7 @@
 				<label>{{ data['Set']['node'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="discriptivelongname" name='long_DN'>
+				<input class="form-control" type="text" placeholder="discriptivelongname" name='long_DN'>
 			</div>
 
 			<div class="form-group">
@@ -98,66 +98,28 @@
 				<label>{{ data['Set']['node'][4]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<div class="form-check">
-			      <label class="form-check-label">
-			        <input type="radio" class="form-check-input" name="peer_group" value="LLNL" checked>
-			        LLNL
-			      </label>
-			    </div>
-
-			    <div class="form-check">
-			      <label class="form-check-label">
-			        <input type="radio" class="form-check-input" name="peer_group" value="2">
-			        Option 2
-			      </label>
-			    </div>
-
-			    <div class="form-check">
-			      <label class="form-check-label">
-			        <input type="radio" class="form-check-input" name="peer_group" value="other">
-			        Other 
-			      </label>
-			    </div>
+				<input type="text" class="form-control" placeholder="LLNL" name='peer_group'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<div class="form-check">
-			      <label class="form-check-label">
-			        <input type="radio" class="form-check-input" name="default_p_group" value="1" checked>
-			        LLNL
-			      </label>
-			    </div>
-
-			    <div class="form-check">
-			      <label class="form-check-label">
-			        <input type="radio" class="form-check-input" name="default_p_group" value="2">
-			        Option 2
-			      </label>
-			    </div>
-
-			    <div class="form-check">
-			      <label class="form-check-label">
-			        <input type="radio" class="form-check-input" name="default_p_group" value="">
-			        Other 
-			      </label>
-			    </div>
+				<input type="text" class="form-control" placeholder="default" name='default_peer_group'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][6]['title'] }}
 				<a href="#" data-toggle="popover"  data-placement="auto right" data-trigger="focus" data-content="{{ data['Set']['node'][6]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="Candy" name='hostname'>
+				<input class="form-control" type="text" placeholder="Candy" name='hostname'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][7]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][7]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="johndoe@example.com" name='admin_email'>
+				<input class="form-control" type="text" placeholder="johndoe@example.com" name='admin_email'>
 			</div>
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">

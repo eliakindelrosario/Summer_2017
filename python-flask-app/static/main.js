@@ -18,12 +18,12 @@ $(document).ready(function(){
  	// Activate popover event
  	$('[data-toggle="popover"]').popover();
 
- 	//Don't Show password fields if root passwered is checked for all
+ 	//Don't Show password fields if root password is checked for all
  	$(".root").change(function(){
  		$(".sub").attr('disabled', this.checked)
  	});
 
- 	// Hide all password fields
+ 	// Hide all password fields if checked
  	$(".hide_pass").hide();
 	$(".password_handler").click(function() {
     	if($(this).is(":checked")) {

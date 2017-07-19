@@ -21,15 +21,21 @@ def questionnaire():
 		return redirect(url_for('complete'))
 	else:
 		# display questionnaire by default
-		with open("init.json", "r") as init_data:
+		with open("static/init.json", "r") as init_data:
 			data = json.load(init_data)
-			
+
 		return render_template('questionnaire.html', data=data, text="Hello World")
 
 @app.route('/complete')
 def complete():
 	""" Render template with complete message."""
 	return render_template('complete.html')
+
+@app.route('/json')
+def getJson():
+	with open("static/init.json", "r") as init_data:
+		data = json.load(init_data)
+	return data
 
 # Run this program if called directly
 if __name__ == "__main__":
