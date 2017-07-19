@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Test Form</title>
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	</head>
+<body>
+	<div class="container">
+		<h1> Hello {{name}}</h1>
+		
+		<form id="display">
+		</form>
+	</div>
+<script>
+var data = [
+	{"title":"Username", "datatype":"text"},
+	{"title":"Email", "datatype":"email"},
+	{"title":"Age", "datatype":"text"},
+	{"title":"City", "datatype":"type", "options":["Select","California", "Florida", "St.Thomas"], "count":"a","list":"4"},
+	{"title":"Activity", "datatype":"type", "options":["Select", "Football", "Baseball", "Volleyball"], "count":"b","list":"4"},
+	{"title":"Message", "datatype":"textarea"}
+]
+
+console.log("Starting Program")
+// Execute Function
+createForm(data);
+
+function createForm(data){
+	var i;
+	var x;
+	var head = document.createElement("H3"); // Create an h3 tag
+	head.setAttribute("id", "heading"); // add id of heading to h3 tag
+	head.setAttribute("style", "color:#337ab7;");
+	document.getElementById("display").appendChild(head);//add the h3 tag under display
+	document.getElementById("heading").innerHTML = "My Form";// write "My Form" inside h3 tag
+	console.log("Completed Header")
+
+	for(i=0;i<data.length;i++){
+		if(data[i].datatype=="type"){
+			var label = document.createElement("Label");
+			label.setAttribute("id", data[i].count);
+			label.setAttribute("style", "color:#337ab7;");
+			document.getElementById("display").appendChild(label);
+			document.getElementById(data[i].count).innerHTML = data[i].title;
+			console.log("First IF: Completed "+data[i].title)
+		}else{
+			var label = document.createElement("Label");
+			label.setAttribute("id", data[i].datatype);
+			label.setAttribute("style", "color:#337ab7;");
+			document.getElementById("display").appendChild(label);
+			document.getElementById(data[i].datatype).innerHTML = data[i].title;
+			console.log("First ELSE: Completed "+data[i].title)
+		}//End FIRST IF
+
+		// Put a space between elements 
+		document.getElementById("display").appendChild(document.createElement("BR"))
+
+		if(data[i] == "type"){
+			x = document.createElement("Select");
+			x.setAttribute("type", data[i].datatype);
+			x.setAttribute("value", data[i].options[k]);
+			var so = data[i].options[k];
+			var ft = data[i].count;
+			var soft = so.concat(ft);
+			document.getElementById("display").appendChild(x)
+
+			for(var k=0;k<data[i].list;k++){
+				var z = document.createElement("Option");
+				z.setAttribute("type", data[i].datatype);
+				z.setAttribute("class", "form-control");
+				var pa = data[i].title;
+				var rt = data[i].count;
+				var part = pa.concat(rt);
+				x.setAttribute("id", part);
+				document.getElementById("soft").appendChild(z)
+				document.getElementById("part").innerHTML = data[i].options[k]
+
+			console.log("SECOND IF: Completed "+data[i].title)
+			}
+			
+		}else if(data[i] == "dat"){
+				x = document.createElement("Input");
+				x.setAttribute("type", data[i].datatype);
+				x.setAttribute("class", "form-control");
+				x.setAttribut("id", "datepicker")
+				document.getElementById("display").appendChild(x)
+				console.log("First ELSE IF: Completed "+data[i].title)
+			}else{
+				x = document.createElement("Input");
+				x.setAttribute("type", data[i].datatype);
+				x.setAttribute("id", data[i].datatype);
+				x.setAttribute("class", "form-control")
+				document.getElementById("display").appendChild(x)
+				console.log("SECOND IF: Completed "+data[i].title)
+			}
+
+			// Put a space between elements 
+			document.getElementById("display").appendChild(document.createElement("BR"))
+	}//END OF FOR LOOP
+}// END CREATE FORM
+
+</script>
+</body>
+</html> 
