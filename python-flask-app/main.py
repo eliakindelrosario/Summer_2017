@@ -35,11 +35,11 @@ def complete():
 def getJson():
 	with open("static/init.json", "r") as init_data:
 		data = json.load(init_data)
-	return data
+	return url_for('static', filename='init.josn')
 
 @app.route('/test')
 def test():
-	return render_template('test.html')
+	return render_template('test.html', name="WORLD")
 
 
 # Run this program if called directly
