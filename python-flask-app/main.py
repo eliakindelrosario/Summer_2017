@@ -31,6 +31,10 @@ def complete():
 	""" Render template with complete message."""
 	return render_template('complete.html')
 
+@app.route('/test')
+def test():
+	return render_template('test.html')
+
 # Run this program if called directly
 if __name__ == "__main__":
 	app.secret_key = 'secret'
