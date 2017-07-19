@@ -37,6 +37,11 @@ def getJson():
 		data = json.load(init_data)
 	return data
 
+@app.route('/test')
+def test():
+	return render_template('test.html')
+
+
 # Run this program if called directly
 if __name__ == "__main__":
 	app.secret_key = 'secret'
