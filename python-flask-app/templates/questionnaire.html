@@ -15,7 +15,7 @@
 				<label>{{ data['Set']['main'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<select class="form-control" name='11'>
+				<select class="form-control" name='esgf_mirror'>
 					<option selected>{{ data['Mirrors'][0]}}</option>
 					<option value="{{ data['Mirrors'][1]}}">{{ data['Mirrors'][1]}}</option>
 					<option value="{{ data['Mirrors'][2]}}">{{ data['Mirrors'][2]}}</option>
@@ -27,34 +27,34 @@
 				<label>{{ data['Set']['main'][1]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="LLNL" name ='2'>
+				<input type="text" class="form-control" value="LLNL" name ='organization_name'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['main'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="8.8.8.8" name ='3'>
+				<input type="text" class="form-control" value="8.8.8.8" name ='Installation_IP'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['main'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="root" class="form-control" placeholder="xxxxxxxx" name ='4'>
+				<input type="text" class="form-control" placeholder="xxxxxxxx" name ='admin_password'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['main'][4]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" placeholder="xxxxxxxx"  name ='5'>
+				<input type="text" class="form-control" placeholder="xxxxxxxx"  name ='admin_conf_password'>
 			</div>
 
 			<div class="form-group">
 				<div class="checkbox">
 			      <label>
-			        <input type="checkbox" name="special"> Use this password for all root configuration <a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+			        <input type="checkbox" class="password_handler" name="special"> Use this password for all root configuration <a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['main'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 			      </label>
 			    </div>
 			</div>
@@ -70,63 +70,94 @@
 				<label>{{ data['Set']['node'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hercules" name='6'>
+				<input type="text" class="form-control" value="Hercules" name='qualified_DN'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][1]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" placeholder="Sammy" name='7'>
+				<input class="form-control" type="text" placeholder="Sammy" name='short_DN'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="discriptivelongname" name='8'>
+				<input class="form-control" type="text" value="discriptivelongname" name='long_DN'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" placeholder="OnePiece" name='9'>
+				<input type="text" class="form-control" placeholder="OnePiece" name='name_space'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][4]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<select class="form-control" name='10'>
-					<option selected>1.</option>
-					<option value="2">2.</option>
-				</select>
-				<small class="form-text text-muted">Sample: Pick one.</small>
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="peer_group" value="LLNL" checked>
+			        LLNL
+			      </label>
+			    </div>
+
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="peer_group" value="2">
+			        Option 2
+			      </label>
+			    </div>
+
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="peer_group" value="other">
+			        Other 
+			      </label>
+			    </div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<select class="form-control" name='11'>
-					<option selected>1.</option>
-					<option value="2">2.</option>
-				</select>
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="default_p_group" value="1" checked>
+			        LLNL
+			      </label>
+			    </div>
+
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="default_p_group" value="2">
+			        Option 2
+			      </label>
+			    </div>
+
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="default_p_group" value="">
+			        Other 
+			      </label>
+			    </div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][6]['title'] }}
-				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][6]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
+				<a href="#" data-toggle="popover"  data-placement="auto right" data-trigger="focus" data-content="{{ data['Set']['node'][6]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="Candy" name='12'>
+				<input class="form-control" type="text" value="Candy" name='hostname'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['node'][7]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['node'][7]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="johndoe@example.com" name='13'>
+				<input class="form-control" type="text" value="johndoe@example.com" name='admin_email'>
 			</div>
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
@@ -139,59 +170,68 @@
 				<label>{{ data['Set']['database'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<select class="form-control" name='14'>
-					<option selected>No</option>
-					<option value="Yes">Yes</option>
-				</select>
+				<div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="is_database_external" value="yes" checked>
+			        Yes
+			      </label>
+			    </div>
+
+			    <div class="form-check">
+			      <label class="form-check-label">
+			        <input type="radio" class="form-check-input" name="is_database_external" value="no">
+			        No
+			      </label>
+			    </div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['database'][1]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="The red string of fate." name='15'>
+				<input class="form-control" type="text" value="The red string of fate." name='database_con_string'>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['database'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="text" value="Hunger Games!" name='16'>
+				<input class="form-control" type="text" value="Hunger Games!" name='low_priv_acc'>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['database'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="sub" class="form-control" type="password" value="password" name='17'>
+				<input class="form-control" type="password" value="password" name='postgress_password_urs'>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['database'][4]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input class="form-control" type="password" value="password" name='18'>
+				<input class="form-control" type="password" value="password" name='postgress_password'>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['database'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="password" class="form-control" value="password" name="19">
+				<input type="password" class="form-control" value="password" name="postgress_pass_confirm">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['database'][6]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][6]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text"  value="45679" class="form-control" name="20">
+				<input type="text"  value="45679" class="form-control" name="postgress_port">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['database'][7]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['database'][7]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text"  value="951267317238" class="form-control" name="21">
+				<input type="text"  value="951267317238" class="form-control" name="organization_id">
 			</div>
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
@@ -206,12 +246,12 @@
 				</label>
 				<div class="form-check form-check-inline">
 					<label class="form-check-label">
-				  		<input class="form-check-input" type="radio" name="22" id="inlineRadio1" value="option1"> 1
+				  		<input class="form-check-input" type="radio" name="install_tomcat"  value="yes" checked> Yes
 				  </label>
 				</div>
 				<div class="form-check form-check-inline">
 					<label class="form-check-label">
-				    	<input class="form-check-input" type="radio" name="22" id="inlineRadio2" value="option2"> 2
+				    	<input class="form-check-input" type="radio" name="install_tomcat"  value="no"> No
 				  </label>
 				</div>
 			</div>
@@ -220,28 +260,46 @@
 				<label>{{ data['Set']['tomcat'][1]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text"  value="Micheal" class="form-control" name="23">
+				<input type="text"  value="Micheal" class="form-control" name="tomcat_urs">
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="form-group">
 				<label>{{ data['Set']['tomcat'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text"  value="951267317238" class="form-control" name="24">
+				<input type="password"  value="password" class="form-control" name="tomcat_password">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['tomcat'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text"  value="951267317238" class="form-control" name="25">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="add_usr"  value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="add_usr"  value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['tomcat'][4]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['tomcat'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text"  value="951267317238" class="form-control" name="26">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="esg_redirect"  value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="esg_redirect"  value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -255,7 +313,16 @@
 				<label>{{ data['Set']['esgcet'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['esgcet'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="27">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="esgcet" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="esgcet" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -269,7 +336,16 @@
 				<label>{{ data['Set']['thredds'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['thredds'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="28">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="threads" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="threads" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -284,7 +360,16 @@
 				<label>{{ data['Set']['dashboard'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['dashboard'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="29">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="dashboard" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="dashboard" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -298,35 +383,53 @@
 				<label>{{ data['Set']['domainName'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="30">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="distinguished_name" value="OU" checked> ESFGF.ORG
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="distinguished_name" value="O"> ESGF
+				  </label>
+				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="hide_pass" class="form-group">
 				<label>{{ data['Set']['domainName'][1]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="31">
+				<input type="password" class="form-control" value="password" name="keystore_pass">
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="hide_pass" class="form-group">
 				<label>{{ data['Set']['domainName'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="32">
+				<input type="password" class="form-control" value="password" name="confirm_keystore_pass">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['domainName'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="33">
+				<input type="text" class="form-control" value="000.000.000.000" name="cleared_ip">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['domainName'][4]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['domainName'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="34">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="allow_more_ip" value="no" checked> No
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="allow_more_ip" value="yes"> Yes
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -340,42 +443,60 @@
 				<label>{{ data['Set']['certificate'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="35">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="generate_cert_sign_request" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="generate_cert_sign_request" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['certificate'][1]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="36">
+				<input type="text" class="form-control" value="0.0.0.0" name="host_ip">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['certificate'][2]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="37">
+				<input type="text" class="form-control" value="8.8.8.8" name="host_route_ip">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['certificate'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="38">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="is_external_route_ip" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="is_external_route_ip" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['certificate'][4]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="39">
+				<input type="text" class="form-control" placeholder="idp peer node" name="FQDN">
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['certificate'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certificate'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="40">
+				<input type="text" class="form-control" placeholder="certificate" name="cert_keystore">
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -389,42 +510,78 @@
 				<label>{{ data['Set']['globus'][0]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="41">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="install_globus" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="install_globus" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['globus'][1]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="42">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="backup_globus" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="backup_globus" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['globus'][2]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="43">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="reg_gridftp" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="reg_gridftp" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['globus'][3]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][3]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="44">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="reg_myProxi" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="reg_myProxi" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['globus'][4]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][4]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="45">
+				<input type="text" class="form-control" value="Thor" name="globus_usr">
 			</div>
 
-			<div class="form-group">
+			<div class="hide_pass" class="hide_pass" class="form-group">
 				<label>{{ data['Set']['globus'][5]['title'] }}
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['globus'][5]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="46">
+				<input type="password" class="form-control" value="password" name="globus_pass">
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -438,14 +595,32 @@
 				<label>{{ data['Set']['openid'][0]['title'] }}
 					<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['openid'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="47">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="install_openid" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="install_openid" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['openid'][1]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['openid'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="48">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="backup_openid" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="backup_openid" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -459,7 +634,16 @@
 				<label>{{ data['Set']['security'][0]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="49">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="install_security" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="install_security" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -473,7 +657,16 @@
 				<label>{{ data['Set']['idp'][0]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['idp'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="50">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="install_services" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="install_services" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -487,7 +680,16 @@
 				<label>{{ data['Set']['search'][0]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['search'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="51">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="install_search" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="install_search" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Prev Button-->
@@ -501,23 +703,33 @@
 				<label>{{ data['Set']['security_schema'][0]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security_schema'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="52">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="install_schema" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="install_schema" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<div class="form-group">
 				<label>{{ data['Set']['security_schema'][1]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security_schema'][1]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="53">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="backup_schema" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="backup_schema" value="no"> No
+				  </label>
+				</div>
 			</div>
-
-			<div class="form-group">
-				<label>{{ data['Set']['security_schema'][2]['title'] }} 
-				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['security_schema'][2]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
-				</label>
-				<input type="text" class="form-control" value="Hello" name="54">
-			</div>
-
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
@@ -529,7 +741,16 @@
 				<label>{{ data['Set']['certs'][0]['title'] }} 
 				<a href="#" data-toggle="popover" data-trigger="focus" data-content="{{ data['Set']['certs'][0]['tip'] }}"><img src="{{ data['Helper']['toolTipIMG'] }}" height="16" width="16"/></a>
 				</label>
-				<input type="text" class="form-control" value="Hello" name="55">
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				  		<input class="form-check-input" type="radio" name="re_generate_certificate" value="yes" checked> Yes
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label">
+				    	<input class="form-check-input" type="radio" name="re_generate_certificate" value="no"> No
+				  </label>
+				</div>
 			</div>
 
 			<!-- Next and Submit Button-->

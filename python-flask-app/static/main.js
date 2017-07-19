@@ -23,4 +23,14 @@ $(document).ready(function(){
  		$(".sub").attr('disabled', this.checked)
  	});
 
+ 	// Hide all password fields
+ 	$(".hide_pass").hide();
+	$(".password_handler").click(function() {
+    	if($(this).is(":checked")) {
+        	$(".hide_pass").show(300);
+    	} else {
+        	$(".hide_pass").hide(200);
+    	}
+	});
+
 });
