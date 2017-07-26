@@ -16,11 +16,13 @@
 		"main":[
 			{
 				"title": "Select an ESGF distribution mirror for this installation",
-				"tip": "The distribution mirrors are ordered from 'fastest' to 'slowest'."
+				"tip": "The distribution mirrors are ordered from 'fastest' to 'slowest'.",
+				"type": "text"
 			},
 			{
 				"title": "What is the name of your organization?",
-				"tip": "Example: >> Name of organization: LLNL <<"
+				"tip": "Example: >> Name of organization: LLNL <<",
+				"type": "text"
 			},
 			{
 				"title": "Please select the IP address to use for this installation",
@@ -132,7 +134,8 @@
 		"esgcet":[
 			{
 				"title":"Do you want to continue with esgcet installation and setup?",
-				"tip": ""
+				"tip": "",
+				"option": ["All","Data","Compute","Index","IDP"]
 			}
 		],
 
@@ -169,7 +172,8 @@
 			},
 			{
 				"title":"Do you wish to allow further ips?",
-				"tip": ""
+				"tip": "",
+				"type": "textarea"
 			}
 		],
 

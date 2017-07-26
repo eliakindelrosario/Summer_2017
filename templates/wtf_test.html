@@ -1,0 +1,64 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Testing WTF with Bootstrap{% endblock %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='mystyle.css')}}">
+<style media="screen">
+			.container{
+				width: 60%;
+			}
+			.navbar{
+				background-color: #E3FBFF
+			}
+			.hosted_by{
+				float:right;
+			}
+			.powered_by{
+				float: right;
+				padding-left: 480px;
+			}
+			.jumbotron{
+				background-color: #fff
+			}
+			.btn{
+				width: 100px;
+			}
+
+			.page{
+				display: none;
+			}
+			.active{
+				display: inherit;
+			}
+
+		</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+	<form method="POST" action="/wt_form">
+		<!-- Mirror Selection -->
+		<div class="page active">
+			<div>{{ wtf.form_field(form.distribution_mirror) }}</div>
+			<!-- Next Button-->
+			<input type="button" value="Next" class="btn btn-default next">
+		</div>
+		<!-- Node Configuration-->
+		<div class="page">
+		    <div>{{ wtf.form_field(form.email) }}</div>
+		    <div>{{ wtf.form_field(form.password) }}</div>
+		    <!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		    <input type="submit" value="Submit">
+		</div>
+	</form>
+
+{% block scripts %}
+{{super()}}
+<script src="{{url_for('static', filename='main.js')}}"></script>
+
+{% endblock %}
+</div>
+{% endblock %}
