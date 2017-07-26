@@ -57,18 +57,38 @@ def getJson():
 
 
 class Mirror(Form):
-	data = getJson()
-	print "{}".format(data)
+	data = getJson() # get questions from json data
+	#print "{}".format(data)
+
+	# Mirror options to choose from
 	options = [
 		("1","distrib-coffee.ipsl.jussieu.fr/pub/esgf"),
 		("2","dist.ceda.ac.uk/esgf"),
 		("3","aims1.llnl.gov/esgf"),
 		("4","esg-dn2.nsc.liu.se/esgf")]
-	distribution_mirror = SelectField(data['Sets']['mirror']['title'], choices=options)
+
+	# TODO - Dynamically create a list of tuples.
+	# test = [(data['mirror']['options'], x) for x in data['mirror']['options']]
+	# print "BIG HALT!!! {}".format(test)
+
+	distribution_mirror = SelectField(data['mirror']['title'], choices=options)
 
 class Node(Mirror):
-	email = TextField('Email', validators=[InputRequired(), Email(message="Invalid Email Address")])
-	password = PasswordField('Password', [InputRequired(), Length(min=8)])
+	""" Creates a form with all node related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	data = getJson()
+
+	organization_name = TextField(data['node'][0]['title'], validators=[InputRequired()])
+	short_name = TextField(data['node'][1]['title'], validators=[InputRequired()])
+	long_name = TextField(data['node'][2]['title'], validators=[InputRequired()])
+	namespace = TextField(data['node'][3]['title'], validators=[InputRequired()])
+	peer_group = TextField(data['node'][4]['title'], validators=[InputRequired()])
+	default_peer_node = TextField(data['node'][5]['title'], validators=[InputRequired()])
+	hostname = TextField(data['node'][6]['title'], validators=[InputRequired()])
+	ip_address = TextField(data['node'][7]['title'], validators=[InputRequired()])
+	qualifie_domain = TextField(data['node'][8]['title'], validators=[InputRequired()])
+	email = TextField(data['node'][9]['title'], validators=[InputRequired(), Email(message="Invalid Email Address")])
+	password = PasswordField(data['node'][10]['title'], [InputRequired(), Length(min=8)])
 
 @app.route('/wt_form', methods=['GET','POST'])
 def test_wtform():

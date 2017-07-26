@@ -3,8 +3,7 @@
 {% block title %}Testing WTF with Bootstrap{% endblock %}
 {% block styles %}
 {{super()}}
-<link rel="stylesheet"
-      href="{{url_for('.static', filename='mystyle.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='mystyle.css')}}">
 <style media="screen">
 			.container{
 				width: 60%;
@@ -32,20 +31,31 @@
 			.active{
 				display: inherit;
 			}
-
 		</style>
 {% endblock %}
 {% block body %}
 <div class="container">
 	<form method="POST" action="/wt_form">
+
 		<!-- Mirror Selection -->
 		<div class="page active">
 			<div>{{ wtf.form_field(form.distribution_mirror) }}</div>
 			<!-- Next Button-->
 			<input type="button" value="Next" class="btn btn-default next">
 		</div>
+
 		<!-- Node Configuration-->
 		<div class="page">
+			<H3> Node Configuration</H3>
+		    <div>{{ wtf.form_field(form.organization_name) }}</div>
+		    <div>{{ wtf.form_field(form.short_name) }}</div>
+		    <div>{{ wtf.form_field(form.long_name) }}</div>
+		    <div>{{ wtf.form_field(form.namespace) }}</div>
+		    <div>{{ wtf.form_field(form.peer_group) }}</div>
+		    <div>{{ wtf.form_field(form.default_peer_node) }}</div>
+		    <div>{{ wtf.form_field(form.hostname) }}</div>
+		    <div>{{ wtf.form_field(form.ip_address) }}</div>
+		    <div>{{ wtf.form_field(form.qualifie_domain) }}</div>
 		    <div>{{ wtf.form_field(form.email) }}</div>
 		    <div>{{ wtf.form_field(form.password) }}</div>
 		    <!-- Next and Prev Button-->

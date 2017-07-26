@@ -4,93 +4,90 @@
 		"toolTipIMG": "http://img.freepik.com/free-icon/white-question-mark-on-a-black-circular-background_318-35996.jpg?size=338&ext=jpg"
 	},
 
-	"Sets": {
+	"mirror": {
+			"title": "Select an ESGF distribution mirror for this installation",
+			"type": "select",
+			"options": [
+						"distrib-coffee.ipsl.jussieu.fr/pub/esgf",
+						"dist.ceda.ac.uk/esgf",
+						"aims1.llnl.gov/esgf",
+						"esg-dn2.nsc.liu.se/esgf"
+						],
+			"tip": "The distribution mirrors are ordered from 'fastest' to 'slowest'."
+		},
 
-		"mirror": {
-				"title": "Select an ESGF distribution mirror for this installation",
-				"type": "select",
-				"options": [
-							"distrib-coffee.ipsl.jussieu.fr/pub/esgf",
-							"dist.ceda.ac.uk/esgf",
-							"aims1.llnl.gov/esgf",
-							"esg-dn2.nsc.liu.se/esgf"
-							],
-				"tip": "The distribution mirrors are ordered from 'fastest' to 'slowest'."
+	"node":[
+			{
+				"title": "Name of Organization",
+				"tyep": "text",
+				"default": "",
+				"tip": "Example: LLNL "
 			},
-
-		"node":[
-				{
-					"title": "Name of organization",
-					"tyep": "text",
-					"default": "",
-					"tip": "Example: LLNL "
-				},
-				{
-					"title": "Please select the IP address to use for this installation",
-					"default": "",
-					"type": "",
-					"tip": "Example: 8.8.8.8"
-				},
-				{
-					"title":"Enter a fully qualified domain name for this node?",
-					"type": "text",
-					"default": "",
-					"tip": "A fully quilified doamin is ... Example: llnl.gov."
-				},
-				{
-					"title":"Please give this node a \"short\" name",
-					"type": "text",
-					"default": "",
-					"tip": ""
-				},
-				{
-					"title":"Please give this node a more descriptive \"long\" name",
-					"type": "text",
-					"default": "",
-					"tip": ""
-				},
-				{
-					"title":"What is the namespace to use for this node?",
-					"type": "text",
-					"default": "",
-					"tip": ""
-				},
-				{
-					"title":"What peer group(s) will this node participate in?",
-					"type": "text",
-					"default": "",
-					"tip": ""
-				},
-				{
-					"title":"Default peer node",
-					"type": "text",
-					"default": "",
-					"tip": ""
-				},
-				{
-					"title":"What is the hostname of the node do you plan to publish to?",
-					"type": "text",
-					"default": "",
-					"tip": "Example: esfg@llnl.gov"
-				},
-				{
-					"title":"Admin Email Address",
-					"type": "email",
-					"default": "",
-					"tip": ""
-				},
-				{
-					"title": "Admin password",
-					"type": "password",
-					"default": "",
-					"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
-				},
-				{
-					"title": "Confirm Admin password",
-					"type": "password",
-					"default": "",
-					"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
-				}
-			]
-	}
+			{
+				"title":"Please give this node a \"short\" name",
+				"type": "text",
+				"default": "",
+				"tip": ""
+			},
+			{
+				"title":"Please give this node a more descriptive \"long\" name",
+				"type": "text",
+				"default": "",
+				"tip": ""
+			},
+			{
+				"title":"What is the namespace to use for this node?",
+				"type": "text",
+				"default": "",
+				"tip": ""
+			},
+			{
+				"title":"What peer group(s) will this node participate in?",
+				"type": "text",
+				"default": "",
+				"tip": ""
+			},
+			{
+				"title":"Enter a 'Default' peer node",
+				"type": "text",
+				"default": "",
+				"tip": ""
+			},
+			{
+				"title":"What is the hostname of the node do you plan to publish to?",
+				"type": "text",
+				"default": "",
+				"tip": "Example: esfg@llnl.gov"
+			},
+			{
+				"title": "Please select the IP address to use for this installation",
+				"default": "",
+				"type": "",
+				"tip": "Example: 8.8.8.8"
+			},
+			{
+				"title":"Enter a fully qualified domain name for this node?",
+				"type": "text",
+				"default": "",
+				"tip": "A fully quilified doamin is ... Example: llnl.gov."
+			},
+			{
+				"title":"Admin Email Address",
+				"type": "email",
+				"default": "",
+				"tip": ""
+			},
+			{
+				"title": "Admin password",
+				"type": "password",
+				"default": "",
+				"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
+			},
+			{
+				"title": "Confirm Admin password",
+				"type": "password",
+				"default": "",
+				"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
+			}
+		]
 }
