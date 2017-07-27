@@ -24,13 +24,22 @@ $(document).ready(function(){
  	});
 
  	// Hide all password fields if checked
- 	$(".hide_pass").hide();
-	$(".password_handler").click(function() {
-    	if($(this).is(":checked")) {
-        	$(".hide_pass").show(300);
-    	} else {
-        	$(".hide_pass").hide(200);
-    	}
+	$("#complete_with_root_pass").change(function() {
+		if (!this.checked) {
+			$('#password_p_usr').show();
+			$('#password_postgress').show();
+			$('#tomcat_password').show();
+			$('#keystore_password').show();
+			$('#keystore_password_confirm').show();
+			$('#globus_password').show();
+		} else {
+			$('#password_p_usr').hide();
+			$('#password_postgress').hide();
+			$('#tomcat_password').hide();
+			$('#keystore_password').hide();
+			$('#keystore_password_confirm').hide();
+			$('#globus_password').hide();
+		}
 	});
 
 });

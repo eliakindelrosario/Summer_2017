@@ -8,18 +8,12 @@
 			.container{
 				width: 60%;
 			}
-			.navbar{
-				background-color: #E3FBFF
-			}
 			.hosted_by{
 				float:right;
 			}
 			.powered_by{
 				float: right;
 				padding-left: 480px;
-			}
-			.jumbotron{
-				background-color: #fff
 			}
 			.btn{
 				width: 100px;
@@ -39,6 +33,7 @@
 
 		<!-- Mirror Selection -->
 		<div class="page active">
+			<H3>Distribution Mirror </H3>
 			<div>{{ wtf.form_field(form.distribution_mirror) }}</div>
 			<!-- Next Button-->
 			<input type="button" value="Next" class="btn btn-default next">
@@ -48,6 +43,7 @@
 		<div class="page">
 			<H3> Node Configuration</H3>
 		    <div>{{ wtf.form_field(form.organization_name) }}</div>
+		    <div>{{ wtf.form_field(form.organization_id) }}</div>
 		    <div>{{ wtf.form_field(form.short_name) }}</div>
 		    <div>{{ wtf.form_field(form.long_name) }}</div>
 		    <div>{{ wtf.form_field(form.namespace) }}</div>
@@ -58,22 +54,110 @@
 		    <div>{{ wtf.form_field(form.qualifie_domain) }}</div>
 		    <div>{{ wtf.form_field(form.email) }}</div>
 		    <div>{{ wtf.form_field(form.password) }}</div>
+		    <div>{{ wtf.form_field(form.password_confirm) }}</div>
+		    <div>{{ wtf.form_field(form.complete_with_root_pass) }}</div>
 		    <!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="button" value="Next" class="btn btn-default next">
-		    <input type="submit" value="Submit">
+		</div>
+
+		<!-- Database-->
+		<div class="page">
+			<H3> Database Configuration</H3>
+			<div>{{ wtf.form_field(form.is_external) }}</div>
+			<div>{{ wtf.form_field(form.db_con_string) }}</div>
+			<div>{{ wtf.form_field(form.low_priv_acc) }}</div>
+			<div>{{ wtf.form_field(form.password_p_usr) }}</div>
+			<div>{{ wtf.form_field(form.password_postgress) }}</div>
+			<div>{{ wtf.form_field(form.db_port) }}</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
 		</div>
 
 		<!-- Tomcat-->
 		<div class="page">
-			
-		</div> 
+			<H3> Tomcat Configuration</H3>
+			<div>{{ wtf.form_field(form.install_tomcat) }}</div>
+			<div>{{ wtf.form_field(form.tomcat_usr) }}</div>
+			<div>{{ wtf.form_field(form.tomcat_password) }}</div>
+			<div>{{ wtf.form_field(form.add_more_usrs) }}</div>
+			<div>{{ wtf.form_field(form.redirect_to_manager) }}</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div>
+
+		<!-- DomainName-->
+		<div class="page">
+			<H3> DomainName Configuration</H3>
+			<div>{{ wtf.form_field(form.dn_to_use) }}</div>
+			<div>{{ wtf.form_field(form.keystore_password) }}</div>
+			<div>{{ wtf.form_field(form.keystore_password_confirm) }}</div>
+			<div>{{ wtf.form_field(form.cleared_ip) }}</div>
+			<div>{{ wtf.form_field(form.additional_ips) }}</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div>
+
+		<!-- Globus-->
+		<div class="page">
+			<H3> Tomcat Configuration</H3>
+			<div>{{ wtf.form_field(form.install_globus) }}</div>
+			<div>{{ wtf.form_field(form.backup_globus) }}</div>
+			<div>{{ wtf.form_field(form.register_gridftp) }}</div>
+			<div>{{ wtf.form_field(form.globus_usr) }}</div>
+			<div>{{ wtf.form_field(form.globus_password) }}</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div>
+
+		<!-- Optional Installations -->
+		<div class="page">
+			<H3> Optional Installation </H3>
+			<div>{{ wtf.form_field(form.esgcet) }}</div>
+			<div>{{ wtf.form_field(form.thredds) }}</div>
+			<div>{{ wtf.form_field(form.dashboard) }}</div>
+			<div>{{ wtf.form_field(form.openid) }}</div>
+			<div>{{ wtf.form_field(form.openid_bkup) }}</div>
+			<div>{{ wtf.form_field(form.security) }}</div>
+			<div>{{ wtf.form_field(form.idp) }}</div>
+			<div>{{ wtf.form_field(form.search) }}</div>
+			<div>{{ wtf.form_field(form.security_schema) }}</div>
+			<div>{{ wtf.form_field(form.security_schema_bkup) }}</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="button" value="Next" class="btn btn-default next">
+		</div>
+
+		<!-- Certificate-->
+		<div class="page">
+			<H3> Certificate Configuration</H3>
+			<div>{{ wtf.form_field(form.gen_certificate) }}</div>
+			<div>{{ wtf.form_field(form.host_ip) }}</div>
+			<div>{{ wtf.form_field(form.public_ip) }}</div>
+			<div>{{ wtf.form_field(form.use_external_idp) }}</div>
+			<div>{{ wtf.form_field(form.fqdn) }}</div>
+			<div>{{ wtf.form_field(form.keystore_certificate) }}</div>
+			<div>{{ wtf.form_field(form.regenerate_certificate) }}</div>
+
+			<!-- Next and Prev Button-->
+			<input type="button" value="Prev" class="btn btn-default prev">
+			<input type="submit" value="Submit" class="btn btn-default">
+		</div>
+
 	</form>
 
 {% block scripts %}
 {{super()}}
 <script src="{{url_for('static', filename='main.js')}}"></script>
-
 {% endblock %}
 </div>
 {% endblock %}
