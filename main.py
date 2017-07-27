@@ -89,6 +89,40 @@ class Node(Mirror):
 	qualifie_domain = TextField(data['node'][8]['title'], validators=[InputRequired()])
 	email = TextField(data['node'][9]['title'], validators=[InputRequired(), Email(message="Invalid Email Address")])
 	password = PasswordField(data['node'][10]['title'], [InputRequired(), Length(min=8)])
+	use_root_pass = BooleanField('Use this password for the rest of the configuration?')
+
+class Database(Form):
+	""" Creates a form with database related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	pass
+
+class Tomcat(Form):
+	""" Creates a form with tomcat related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	data = getJson()
+
+	organization_name = TextField(data['node'][0]['title'], validators=[InputRequired()])
+
+class Globus(Form):
+	""" Creates a form with globus related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	pass
+
+class Certificate(Form):
+	""" Creates a form with certificate related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	pass
+
+class DomainName(Form):
+	""" Creates a form with domainname related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	pass
+
+class Optional_Installations(Form):
+	""" Creates a form with other installations related questions.
+	The questions are extracted from the init.json file found in the static folder."""
+	pass
+
 
 @app.route('/wt_form', methods=['GET','POST'])
 def test_wtform():

@@ -5,6 +5,7 @@
 	},
 
 	"mirror": {
+			"fieldname": "esgf_mirrors",
 			"title": "Select an ESGF distribution mirror for this installation",
 			"type": "select",
 			"options": [
@@ -13,81 +14,320 @@
 						"aims1.llnl.gov/esgf",
 						"esg-dn2.nsc.liu.se/esgf"
 						],
-			"tip": "The distribution mirrors are ordered from 'fastest' to 'slowest'."
+			"discription": "The distribution mirrors are ordered from 'fastest' to 'slowest'."
 		},
 
 	"node":[
 			{
+				"fieldname": "",
 				"title": "Name of Organization",
 				"tyep": "text",
 				"default": "",
-				"tip": "Example: LLNL "
+				"discription": "Example: LLNL "
 			},
 			{
+				"fieldname": "",
 				"title":"Please give this node a \"short\" name",
 				"type": "text",
 				"default": "",
-				"tip": ""
+				"discription": ""
 			},
 			{
+				"fieldname": "",
 				"title":"Please give this node a more descriptive \"long\" name",
 				"type": "text",
 				"default": "",
-				"tip": ""
+				"discription": ""
 			},
 			{
+				"fieldname": "",
 				"title":"What is the namespace to use for this node?",
 				"type": "text",
 				"default": "",
 				"tip": ""
 			},
 			{
+				"fieldname": "",
 				"title":"What peer group(s) will this node participate in?",
 				"type": "text",
 				"default": "",
 				"tip": ""
 			},
 			{
+				"fieldname": "",
 				"title":"Enter a 'Default' peer node",
 				"type": "text",
 				"default": "",
 				"tip": ""
 			},
 			{
+				"fieldname": "",
 				"title":"What is the hostname of the node do you plan to publish to?",
 				"type": "text",
 				"default": "",
 				"tip": "Example: esfg@llnl.gov"
 			},
 			{
+				"fieldname": "",
 				"title": "Please select the IP address to use for this installation",
 				"default": "",
 				"type": "",
 				"tip": "Example: 8.8.8.8"
 			},
 			{
+				"fieldname": "",
 				"title":"Enter a fully qualified domain name for this node?",
 				"type": "text",
 				"default": "",
 				"tip": "A fully quilified doamin is ... Example: llnl.gov."
 			},
 			{
+				"fieldname": "",
 				"title":"Admin Email Address",
 				"type": "email",
 				"default": "",
 				"tip": ""
 			},
 			{
+				"fieldname": "",
 				"title": "Admin password",
 				"type": "password",
 				"default": "",
 				"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
 			},
 			{
+				"fieldname": "",
 				"title": "Confirm Admin password",
 				"type": "password",
 				"default": "",
 				"tip": "Strong passwords are generally a mixture of Capital Letters, lowercase letters, numbers, and special characters. It is strongly advised to at least have one Capital Letter, One number, and one special character."
+			}
+		],
+
+	"database":[
+			{
+				"fieldname": "",
+				"title":"Is the database external to this node?",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"fieldname": "",
+				"title":"What is the database connection string?",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"fieldname": "",
+				"title":"What is the (low priv) db account for publisher?",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"fieldname": "",
+				"title":"What is the db password for publisher user",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"fieldname": "",
+				"title":"Enter password for postgres user dbsuper:",
+				"tip": "Your database is external if it is ..."
+			},
+			{
+				"fieldname": "",
+				"title":"Confirm password for postgres user dbsuper:",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please Enter PostgreSQL port number",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"What is your organization's id?",
+				"tip": ""
+			}
+		],
+
+	"tomcat":[
+			{
+				"fieldname": "",
+				"title":"Do you want to continue with Tomcat installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please enter username for tomcat",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please enter password for user",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Would you like to add another user?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Do you wish to setup the redirect to the esgf-node-manager's page?",
+				"tip": ""
+			}
+		],
+
+	"domainName":[
+		{
+			"fieldname": "",
+			"title":"Would you like to use the DN: (OU=ESGF.ORG, O=ESGF)",
+			"tip": ""
+		},
+		{
+			"fieldname": "",
+			"title":"Please enter the password for this keystore",
+			"tip": ""
+		},
+		{
+			"fieldname": "",
+			"title":"Please re-enter the password for this keystore",
+			"tip": ""
+		},
+		{
+			"fieldname": "",
+			"title":"Enter a single ip address which would be cleared to access admin restricted pages.",
+			"tip": ""
+		},
+		{
+			"fieldname": "",
+			"title":"Do you wish to allow further ips?",
+			"tip": "",
+			"type": "textarea"
+		}
+	],
+
+	"certificate":[
+			{
+				"fieldname": "",
+				"title":"Do you wish to generate a Certificate Signing Request at this time?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please Enter the IP address of this host",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please Enter the public (i.e. routable) IP address of this host",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Do you wish to use an external IDP peer?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please specify your IDP peer node's FQDN:",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Enter certificate to add to trusted keystore",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Do you wish to (re)GENERATE self signed certs (and usurp what is present)?",
+				"tip": ""
+			}
+		],
+
+	"globus":[
+			{
+				"fieldname": "",
+				"title":"Allow Globus installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Make a backup of the existing Globus distribution (datanode)?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Register the GridFTP server with Globus?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Register the MyProxy server with Globus?",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Please provide a Globus username",
+				"tip": ""
+			},
+			{
+				"fieldname": "",
+				"title":"Globus password",
+				"tip": ""
+			}
+		],
+
+
+	"extras":[
+			{
+				"fieldname":"esgcet",
+				"title":"Do you want to continue with esgcet installation and setup?",
+				"type": "select",
+				"options": ["All","Data","Compute","Index","IDP"],
+				"discription": ""
+			},
+			{
+				"fieldname":"thredds",
+				"title":"Do you want to continue with thredds installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname":"dashboard",
+				"title":"Do you want to continue with ESGF Dashboard IP installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname":"openid",
+				"title":"Allow openid relying party installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname":"openid_bkup",
+				"title":"Make a backup of the existing distribution?",
+				"tip": ""
+			},
+			{
+				"fieldname":"security",
+				"title":"Allow security services installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname":"idp",
+				"title":"Allow idp services installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname": "search",
+				"title":"Allow search services installation and setup?",
+				"tip": ""
+			},
+			{
+				"fieldname": "security_schema",
+				"title":"Allow security schema setup?",
+				"tip": ""
+			},
+			{
+				"fieldname": "security_schema_bkup",
+				"title":"Make a backup of the existing database schema",
+				"tip": ""
 			}
 		]
 }

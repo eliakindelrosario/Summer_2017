@@ -201,6 +201,10 @@
 			{
 				"title":"Enter certificate to add to trusted keystore",
 				"tip": ""
+			},
+			{
+				"title":"Do you wish to (re)GENERATE self signed certs (and usurp what is present)?",
+				"tip": ""
 			}
 		],
 
@@ -273,13 +277,6 @@
 			},
 			{
 				"title":"Make a backup of the existing database schema",
-				"tip": ""
-			}
-		],
-
-		"certs":[
-			{
-				"title":"Do you wish to (re)GENERATE self signed certs (and usurp what is present)?",
 				"tip": ""
 			}
 		]
