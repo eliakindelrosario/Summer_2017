@@ -10,36 +10,8 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = "Development"
 
-# Questionnair route
-# Accepts GET and POST requests
-@app.route('/', methods=['GET','POST'])
-def questionnaire():
-	""" Render template with form fields."""
-	# check if data was sent
-	if request.method == 'POST':
-		# get the data from the form
-		result = request.form
-		# open json file
-		with open('data.json', 'w+') as json_file:
-			# write data to json file
-			json.dump(result, json_file)
-		# return complete  message page after form submition
-		return redirect(url_for('complete'))
-	else:
-		# display questionnaire by default
-		with open("static/init.json", "r") as init_data:
-			data = json.load(init_data)
-
-		return render_template('questionnaire.html', data=data, text="Hello World")
-
-@app.route('/complete')
-def complete():
-	""" Render template with complete message."""
-	return render_template('complete.html')
-
-########## WTF ##################
 def getJson():
-	with open("static/draft.json", "r") as init_data:
+	with open("static/init.json", "r") as init_data:
 		data = json.load(init_data)
 	return data
 
@@ -87,8 +59,8 @@ class Database(Node):
 	is_external = SelectField(data['database'][0]['title'], choices=[("yes","Yes"), ("no","No")])
 	db_con_string = TextField(data['database'][1]['title'], validators=[InputRequired()])
 	low_priv_acc = TextField(data['database'][2]['title'], validators=[InputRequired()])
-	password_p_usr = PasswordField(data['node'][3]['title'], [InputRequired(), Length(min=8)])
-	password_postgress = PasswordField(data['node'][4]['title'], [InputRequired(), Length(min=8)])
+	password_p_usr = PasswordField(data['database'][3]['title'], [InputRequired(), Length(min=8)])
+	password_postgress = PasswordField(data['database'][4]['title'], [InputRequired(), Length(min=8)])
 	db_port = TextField(data['database'][6]['title'], validators=[InputRequired()])
 
 class Tomcat(Database):
@@ -121,8 +93,9 @@ class Globus(DomainName):
 	install_globus = SelectField(data['globus'][0]['title'], choices=[("yes","Yes"), ("no","No")])
 	backup_globus = SelectField(data['globus'][1]['title'], choices=[("yes","Yes"), ("no","No")])
 	register_gridftp = SelectField(data['globus'][2]['title'], choices=[("yes","Yes"), ("no","No")])
-	globus_usr = TextField(data['globus'][3]['title'], validators=[InputRequired()])
-	globus_password = PasswordField(data['globus'][4]['title'], [InputRequired(), Length(min=8)])
+	myproxi_gridftp = SelectField(data['globus'][3]['title'], choices=[("yes","Yes"), ("no","No")])
+	globus_usr = TextField(data['globus'][4]['title'], validators=[InputRequired()])
+	globus_password = PasswordField(data['globus'][5]['title'], [InputRequired(), Length(min=8)])
 
 class Optional_Installations(Globus):
 	""" Creates a form with other installations related questions.
@@ -153,28 +126,38 @@ class Certificate(Optional_Installations):
 	keystore_certificate = TextField(data['certificate'][5]['title'], validators=[InputRequired()])
 	regenerate_certificate = SelectField(data['certificate'][6]['title'], choices=[("yes","Yes"), ("no","No")])
 
-@app.route('/wt_form', methods=['GET','POST'])
-def test_wtform():
-	form = Certificate()
 
-	print form.errors
+@app.route('/', methods=['GET','POST'])
+@app.route('/esgfForm', methods=['GET','POST'])
+def esfgForm():
+	''' Display main webpage and handles both get and post request.
+	If "GET" request then display form.
+	If "POST" request then dump form data into a .json file. '''
 
+	# Initialize forms
+	form = Certificate() # TOFIX: Once you get the installation format, add logic to only render the needed fields 
+
+	# Check for erros
+	#print form.errors
+
+	# Check for "POST" request
 	if request.method == 'POST':
 
-		name = request.form['distribution_mirror']
-		print "data from form {}".format(name)
-		result = request.form
-		print "form {}".format(result)
+		# check for validation
+		# todo
 
-		if form.validate():
-			# Save the comment here.
-			flash('Hello ' + name)
-		else:
-			flash('All the form fields are required. ')
+		# create new json file
+		with open('data.json', 'w+') as json_file:
+			# write data to json file
+			json.dump(result, json_file)
+		# return complete message page after form submition
+		return redirect(url_for('complete'))
 
-	return render_template('wtf_test.html', form=form)
+	# Request is a "GET" request.
+	return render_template('esgfForm.html', form=form)
 
-# Run this program if called directly
-# if __name__ == "__main__":
-# 	app.secret_key = 'secret'
-# 	app.run(debug=True)Please provide 
+@app.route('/complete')
+def complete():
+	""" Render template with complete message."""
+	return render_template('complete.html')
+

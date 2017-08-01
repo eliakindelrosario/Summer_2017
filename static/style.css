@@ -1,0 +1,31 @@
+/* Custom Styling for esgfForm*/
+
+.container{
+	width: 60%;
+}
+
+.btn{
+	width: 100px;
+}
+
+.navbar{
+	background-color: #ebfafa;
+}
+#llnllogo{
+	display: inline-block;
+	float: left;
+}
+
+#coglogo{
+	display: inline-block;
+	float: right;
+}
+
+/* For next and prev buttons to work*/
+.page{
+	display: none;
+}
+
+.active{
+	display: inherit;
+}
