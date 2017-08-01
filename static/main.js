@@ -39,6 +39,7 @@ $(document).ready(function(){
 			$('#keystore_password').hide();
 			$('#keystore_password_confirm').hide();
 			$('#globus_password').hide();
+			//TODO - ADD rootpassword value to these fields
 		}
 	});
 
