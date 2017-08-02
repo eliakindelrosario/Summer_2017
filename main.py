@@ -15,6 +15,9 @@ def getJson():
 		data = json.load(init_data)
 	return data
 
+# Global list
+yes_no = [('','Select'),("yes","Yes"), ("no","No")]
+
 class Mirror(FlaskForm):
 	data = getJson() # get questions from json data
 	#print "{}".format(data)
@@ -25,10 +28,6 @@ class Mirror(FlaskForm):
 		("2","dist.ceda.ac.uk/esgf"),
 		("3","aims1.llnl.gov/esgf"),
 		("4","esg-dn2.nsc.liu.se/esgf")]
-
-	# TODO - Dynamically create a list of tuples.
-	# test = [(data['mirror']['options'], x) for x in data['mirror']['options']]
-	# print "BIG HALT!!! {}".format(test)
 
 	distribution_mirror = SelectField(data['mirror']['title'], choices=options)
 
@@ -56,7 +55,7 @@ class Database(Node):
 	The questions are extracted from the init.json file found in the static folder."""
 	data = getJson()
 
-	is_external = SelectField(data['database'][0]['title'], choices=[("yes","Yes"), ("no","No")])
+	is_external = SelectField(data['database'][0]['title'], choices=yes_no, default='')
 	db_con_string = TextField(data['database'][1]['title'], validators=[InputRequired()])
 	low_priv_acc = TextField(data['database'][2]['title'], validators=[InputRequired()])
 	password_p_usr = PasswordField(data['database'][3]['title'], [InputRequired(), Length(min=8)])
@@ -68,11 +67,11 @@ class Tomcat(Database):
 	The questions are extracted from the init.json file found in the static folder."""
 	data = getJson()
 
-	install_tomcat = SelectField(data['tomcat'][0]['title'], choices=[("yes","Yes"), ("no","No")])
+	install_tomcat = SelectField(data['tomcat'][0]['title'], choices=yes_no, default=1)
 	tomcat_usr = TextField(data['tomcat'][1]['title'], validators=[InputRequired()])
 	tomcat_password = PasswordField(data['tomcat'][2]['title'], [InputRequired(), Length(min=8)])
 	add_more_usrs = TextAreaField(data['tomcat'][3]['title'])
-	redirect_to_manager = SelectField(data['tomcat'][4]['title'], choices=[("yes","Yes"), ("no","No")])
+	redirect_to_manager = SelectField(data['tomcat'][4]['title'], choices=yes_no)
 
 class DomainName(Tomcat):
 	""" Creates a form with domainname related questions.
@@ -90,10 +89,10 @@ class Globus(DomainName):
 	The questions are extracted from the init.json file found in the static folder."""
 	data = getJson()
 
-	install_globus = SelectField(data['globus'][0]['title'], choices=[("yes","Yes"), ("no","No")])
-	backup_globus = SelectField(data['globus'][1]['title'], choices=[("yes","Yes"), ("no","No")])
-	register_gridftp = SelectField(data['globus'][2]['title'], choices=[("yes","Yes"), ("no","No")])
-	myproxi_gridftp = SelectField(data['globus'][3]['title'], choices=[("yes","Yes"), ("no","No")])
+	install_globus = SelectField(data['globus'][0]['title'], choices=yes_no, default=1)
+	backup_globus = SelectField(data['globus'][1]['title'], choices=yes_no)
+	register_gridftp = SelectField(data['globus'][2]['title'], choices=yes_no)
+	myproxi_gridftp = SelectField(data['globus'][3]['title'], choices=yes_no)
 	globus_usr = TextField(data['globus'][4]['title'], validators=[InputRequired()])
 	globus_password = PasswordField(data['globus'][5]['title'], [InputRequired(), Length(min=8)])
 
@@ -102,29 +101,32 @@ class Optional_Installations(Globus):
 	The questions are extracted from the init.json file found in the static folder."""
 	data = getJson()
 
-	esgcet = SelectField(data['extras'][0]['title'], choices=[("yes","Yes"), ("no","No")])
+	# options for esgcet - this creates a list of tuples
+	options = [(x, x) for x in data['extras'][0]['options']]
+
+	esgcet = SelectField(data['extras'][0]['title'], choices=options)
 	thredds = BooleanField(data['extras'][1]['title'])
 	dashboard = BooleanField(data['extras'][2]['title'])
 	openid = BooleanField(data['extras'][3]['title'])
-	openid_bkup = SelectField(data['extras'][4]['title'], choices=[("yes","Yes"), ("no","No")])
+	openid_bkup = SelectField(data['extras'][4]['title'], choices=yes_no)
 	security = BooleanField(data['extras'][5]['title'])
 	idp = BooleanField(data['extras'][6]['title'])
 	search = BooleanField(data['extras'][7]['title'])
 	security_schema = BooleanField(data['extras'][8]['title'])
-	security_schema_bkup = SelectField(data['extras'][9]['title'], choices=[("yes","Yes"), ("no","No")])
+	security_schema_bkup = SelectField(data['extras'][9]['title'], choices=yes_no)
 
 class Certificate(Optional_Installations):
 	""" Creates a form with certificate related questions.
 	The questions are extracted from the init.json file found in the static folder."""
 	data = getJson()
 
-	gen_certificate = SelectField(data['certificate'][0]['title'], choices=[("yes","Yes"), ("no","No")])
+	gen_certificate = SelectField(data['certificate'][0]['title'], choices=yes_no)
 	host_ip = TextField(data['certificate'][1]['title'], validators=[InputRequired()])
 	public_ip = TextField(data['certificate'][2]['title'], validators=[InputRequired()])
-	use_external_idp = SelectField(data['certificate'][3]['title'], choices=[("yes","Yes"), ("no","No")])
+	use_external_idp = SelectField(data['certificate'][3]['title'], choices=yes_no)
 	fqdn = TextField(data['certificate'][4]['title'], validators=[InputRequired()])
 	keystore_certificate = TextField(data['certificate'][5]['title'], validators=[InputRequired()])
-	regenerate_certificate = SelectField(data['certificate'][6]['title'], choices=[("yes","Yes"), ("no","No")])
+	regenerate_certificate = SelectField(data['certificate'][6]['title'], choices=yes_no)
 
 
 @app.route('/', methods=['GET','POST'])

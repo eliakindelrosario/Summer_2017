@@ -161,7 +161,7 @@
 	"tomcat":[
 			{
 				"fieldname": "install_tomcat",
-				"title":"Do you want to continue with Tomcat installation and setup?",
+				"title":"Allow Tomcat installation and setup?",
 				"type":"text",
 				"default": "",
 				"discription": ""
@@ -283,71 +283,71 @@
 	"extras":[
 			{
 				"fieldname":"esgcet",
-				"title":"Do you want to continue with esgcet installation and setup?",
+				"title":"Select esgcet installation and setup type.",
 				"type": "select",
 				"options": ["All","Data","Compute","Index","IDP"],
 				"discription": ""
 			},
 			{
 				"fieldname":"thredds",
-				"title":"Do you want to continue with thredds installation and setup?",
-				"type":"text",
+				"title":"Install and setup thredds",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname":"dashboard",
-				"title":"Do you want to continue with ESGF Dashboard IP installation and setup?",
-				"type":"text",
+				"title":"Install and setup ESGF Dashboard IP ",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname":"openid",
-				"title":"Allow openid relying party installation and setup?",
-				"type":"text",
+				"title":"Install and setup openid relying party",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname":"openid_bkup",
 				"title":"Make a backup of the existing distribution?",
-				"type":"text",
+				"type":"select",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname":"security",
-				"title":"Allow security services installation and setup?",
-				"type":"text",
+				"title":"Install and setup security services",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname":"idp",
-				"title":"Allow idp services installation and setup?",
-				"type":"text",
+				"title":"Install and setup idp services",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname": "search",
-				"title":"Allow search services installation and setup?",
-				"type":"text",
+				"title":"Install and setup search services",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname": "security_schema",
-				"title":"Allow security schema setup?",
-				"type":"text",
+				"title":"Install and setup security schema",
+				"type":"checkbox",
 				"default": "",
 				"discription": ""
 			},
 			{
 				"fieldname": "security_schema_bkup",
 				"title":"Make a backup of the existing database schema",
-				"type":"text",
+				"type":"select",
 				"default": "",
 				"discription": ""
 			}
@@ -357,7 +357,7 @@
 			{
 				"fieldname": "gen_certificate",
 				"title":"Do you wish to generate a Certificate Signing Request at this time?",
-				"type":"text",
+				"type":"select",
 				"default": "",
 				"discription": ""
 			},
@@ -378,7 +378,7 @@
 			{
 				"fieldname": "use_external_idp",
 				"title":"Do you wish to use an external IDP peer?",
-				"type":"boolean",
+				"type":"select",
 				"default": "",
 				"discription": ""
 			},
@@ -399,7 +399,7 @@
 			{
 				"fieldname": "regenerate_certificate",
 				"title":"Do you wish to (re)GENERATE self signed certs (and usurp what is present)?",
-				"type":"text",
+				"type":"select",
 				"default": "",
 				"discription": ""
 			}

@@ -17,7 +17,6 @@
 			<div>{{ wtf.form_field(form.distribution_mirror) }}</div>
 			<!-- Next Button-->
 			<input type="button" value="Next" class="btn btn-default next">
-			<input type="button" value="Next" class="btn btn-default next">
 		</div>
 
 		<!-- Node Configuration-->
@@ -61,10 +60,9 @@
 		<div class="page">
 			<H3> Tomcat Configuration</H3>
 			<div>{{ wtf.form_field(form.install_tomcat) }}</div>
-			<div>{{ wtf.form_field(form.tomcat_usr) }}</div>
-			<div id="tomcat_password">{{ wtf.form_field(form.tomcat_password) }}</div>
-			<div>{{ wtf.form_field(form.add_more_usrs) }}</div>
-			<div>{{ wtf.form_field(form.redirect_to_manager) }}</div>
+			<div class='tom'>{{ wtf.form_field(form.tomcat_usr) }}</div>
+			<div class='tom' id="tomcat_password">{{ wtf.form_field(form.tomcat_password) }}</div>
+			<div class='tom' >{{ wtf.form_field(form.redirect_to_manager) }}</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
@@ -78,7 +76,6 @@
 			<div id="keystore_password">{{ wtf.form_field(form.keystore_password) }}</div>
 			<div id="keystore_password_confirm">{{ wtf.form_field(form.keystore_password_confirm) }}</div>
 			<div>{{ wtf.form_field(form.cleared_ip) }}</div>
-			<div>{{ wtf.form_field(form.additional_ips) }}</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
@@ -87,12 +84,12 @@
 
 		<!-- Globus-->
 		<div class="page">
-			<H3> Tomcat Configuration</H3>
+			<H3> Globus Configuration</H3>
 			<div>{{ wtf.form_field(form.install_globus) }}</div>
-			<div>{{ wtf.form_field(form.backup_globus) }}</div>
-			<div>{{ wtf.form_field(form.register_gridftp) }}</div>
-			<div>{{ wtf.form_field(form.globus_usr) }}</div>
-			<div id="globus_password">{{ wtf.form_field(form.globus_password) }}</div>
+			<div class='glob'>{{ wtf.form_field(form.backup_globus) }}</div>
+			<div class='glob'>{{ wtf.form_field(form.register_gridftp) }}</div>
+			<div class='glob'>{{ wtf.form_field(form.globus_usr) }}</div>
+			<div class='glob' id="globus_password">{{ wtf.form_field(form.globus_password) }}</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
@@ -106,12 +103,12 @@
 			<div>{{ wtf.form_field(form.thredds) }}</div>
 			<div>{{ wtf.form_field(form.dashboard) }}</div>
 			<div>{{ wtf.form_field(form.openid) }}</div>
-			<div>{{ wtf.form_field(form.openid_bkup) }}</div>
+			<div class="hide_ob">{{ wtf.form_field(form.openid_bkup) }}</div>
 			<div>{{ wtf.form_field(form.security) }}</div>
 			<div>{{ wtf.form_field(form.idp) }}</div>
 			<div>{{ wtf.form_field(form.search) }}</div>
 			<div>{{ wtf.form_field(form.security_schema) }}</div>
-			<div>{{ wtf.form_field(form.security_schema_bkup) }}</div>
+			<div class="hide_ss">{{ wtf.form_field(form.security_schema_bkup) }}</div>
 
 			<!-- Next and Prev Button-->
 			<input type="button" value="Prev" class="btn btn-default prev">
@@ -133,7 +130,6 @@
 			<input type="button" value="Prev" class="btn btn-default prev">
 			<input type="submit" value="Submit" class="btn btn-default">
 		</div>
-
 	</form>
 
 {% block scripts %}

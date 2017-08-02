@@ -29,3 +29,21 @@
 .active{
 	display: inherit;
 }
+/* End next and prev button view */
+
+
+.tom{
+	display: none;
+}
+
+.glob{
+	display: none;
+}
+
+.hide_ob{
+	display: none;
+}
+
+.hide_ss{
+	display: none;
+}
