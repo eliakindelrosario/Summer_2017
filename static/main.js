@@ -1,19 +1,19 @@
 $(document).ready(function(){
  	console.log("Hello World!")
 
- 	//Change page forward
- 	$(".next").on("click", function(){
- 		if($('.page.active').index() < $(".page").length-1)
- 			$('.page.active').removeClass("active").next().addClass("active");
- 		console.log("Move Forward. Index:"+$('.page.active').index())
- 	});
+ 	// //Change page forward
+ 	// $(".next").on("click", function(){
+ 	// 	if($('.page.active').index() < $(".page").length-1)
+ 	// 		$('.page.active').removeClass("active").next().addClass("active");
+ 	// 	console.log("Move Forward. Index:"+$('.page.active').index())
+ 	// });
 
- 	//Change page backward
- 	$(".prev").on("click", function(){
- 		if($('.page.active').index() > 0)
- 			$('.page.active').removeClass("active").prev().addClass("active");
- 		console.log("Move Backward. Index:"+$('.page.active').index())
- 	});
+ 	// //Change page backward
+ 	// $(".prev").on("click", function(){
+ 	// 	if($('.page.active').index() > 0)
+ 	// 		$('.page.active').removeClass("active").prev().addClass("active");
+ 	// 	console.log("Move Backward. Index:"+$('.page.active').index())
+ 	// });
 
  	// Activate popover event
  	$('[data-toggle="popover"]').popover();
@@ -98,10 +98,21 @@ $(document).ready(function(){
 		}
 	});
 
-	// Submit all the forms with on button 
-	submitForms = function(){
-    	document.getElementById("form1").submit();
-    	document.getElementById("form2").submit();
-	}
+
+	$(".header").click(function () {
+	    $header = $(this);
+	    //getting the next element
+	    $content = $('.node-cofig');
+	    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+	    $content.slideToggle(500, function () {
+	        //execute this after slideToggle is done
+	        //change text of header based on visibility of content div
+	        // $header.text(function () {
+	        //     //change text based on condition
+	        //     return $content.is(":visible") ? "Collapse" : "Expand";
+	        // });
+	    });
+
+	});
 
 });

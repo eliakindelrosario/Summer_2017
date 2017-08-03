@@ -132,31 +132,25 @@ class Certificate(Optional_Installations):
 @app.route('/', methods=['GET','POST'])
 @app.route('/esgfForm', methods=['GET','POST'])
 def esfgForm():
-	''' Display main webpage and handles both get and post request.
-	If "GET" request then display form.
-	If "POST" request then dump form data into a .json file. '''
+	"""
+		Display main webpage and handles both get and post request.
+		If "GET" request, display form.
+		If "POST" request, dump form data into a .json file and render complete.html
+	"""
 
 	# Initialize forms
 	form = Certificate() # TOFIX: Once you get the installation format, add logic to only render the needed fields 
+	print "Form Created"
 
-	# Check for erros
-	#print form.errors
-
-	# Check for "POST" request
 	if request.method == 'POST':
-
-		# check for validation
-		# todo
-
-		# create new json file
+		# Check for erros
+		#print form.errors
+		result = request.form
 		with open('data.json', 'w+') as json_file:
-			# write data to json file
 			json.dump(result, json_file)
-		# return complete message page after form submition
 		return redirect(url_for('complete'))
-
-	# Request is a "GET" request.
 	return render_template('esgfForm.html', form=form)
+
 
 @app.route('/complete')
 def complete():
