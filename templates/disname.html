@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1>Distinguished Name Setup</h1>
+	<hr>
+	{% from "includes/_formhelpers.html" import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.dn_to_use,class_="form-control")}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.keystore_password,class_="form-control")}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.keystore_password_confirm,class_="form-control")}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.cleared_ip,class_="form-control")}}
+		</div>
+		<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
+{% endblock%}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1>Globus Setup</h1>
+	<hr>
+	{% from "includes/_formhelpers.html" import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.install_globus,class_="form-control")}}
+		</div>
+		<div id="allow" style="display:none">
+			<div class="form-group">
+				{{render_field(form.backup_globus,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.register_gridftp,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.myproxi_gridftp,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.globus_usr,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.globus_password,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.confirm_globus_password,class_="form-control")}}
+			</div>
+		</div>
+		<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
+{% endblock%}

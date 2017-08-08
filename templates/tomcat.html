@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1>Tomcat Setup</h1>
+	<hr>
+	{% from "includes/_formhelpers.html" import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.install_tomcat,class_="form-control")}}
+		</div>
+		<div id="allow" style="display:none">
+			<div class="form-group">
+				{{render_field(form.tomcat_usr,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.tomcat_password,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.confirm_tomcat_password,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.redirect_to_manager,class_="form-control")}}
+			</div>
+		</div>
+		<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
+{% endblock%}

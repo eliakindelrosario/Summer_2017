@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1>Installation Type</h1>
+	<hr>
+	{% from "includes/_formhelpers.html" import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.esgcet,class_="form-control")}}
+		</div>
+		<div class="form-group all data idp" style="display:none">
+			{{render_field(form.thredds,class_="form-control")}}
+		</div>
+		<div class="form-group all data index" style="display:none">
+			{{render_field(form.dashboard,class_="form-control")}}
+		</div>
+		<div class="form-group all compute" style="display:none">
+			{{render_field(form.openid,class_="form-control")}}
+		</div>
+		<div class="form-group op-id" style="display:none">
+			{{render_field(form.openid_bkup,class_="form-control")}}
+		</div>
+		<div class="form-group all data index" style="display:none">
+			{{render_field(form.security,class_="form-control")}}
+		</div>
+		<div class="form-group all" style="display:none">
+			{{render_field(form.idp,class_="form-control")}}
+		</div>
+		<div class="form-group all data compute" style="display:none">
+			{{render_field(form.search,class_="form-control")}}
+		</div>
+		<div class="form-group all compute index" style="display:none">
+			{{render_field(form.security_schema,class_="form-control")}}
+		</div>
+		<div class="form-group sec-sch" style="display:none">
+			{{render_field(form.security_schema_bkup,class_="form-control")}}
+		</div>
+		<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
+{% endblock%}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Tell Internet Explore to use the latest rendering engine... aka: edge-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Set the page to the device width and zoom level to one.-->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<title>{{title}}</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+
+	<body>
+		{% include 'includes/_navbar.html' %}
+		<div class="container">
+			{% include 'includes/_messages.html' %}
+			{% block body %}{% endblock %}
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$('#install_tomcat').change(function(){
+					console.log('Tomcat Handler')
+				    if ($(this).val() == "yes") {
+				        $('#allow').show();
+				        console.log('show')
+					    } else {
+					        $('#allow').hide();
+					        console.log('hide')
+					    }
+					});
+
+				$('#install_globus').change(function(){
+					console.log('Globus Handler')
+				    if ($(this).val() == "yes") {
+				        $('#allow').show();
+				        console.log('show')
+					    } else {
+					        $('#allow').hide();
+					        console.log('hide')
+					    }
+					});
+
+				$('#esgcet').change(function(){
+					console.log('ESGCET Handler')
+					console.log("Value"+$(this).val())
+				    if ($(this).val() == "All") {
+				    	console.log('Show All')
+				        $('.all').show();
+				    } else if ($(this).val() == "Data"){
+				    	console.log('Show Data')
+				    	$('.all').hide();
+				    	$('.data').show();
+				    } else if ($(this).val() == "Compute"){
+				    	console.log('Show Compute')
+				    	$('.all').hide();
+				        $('.compute').show();
+				    }else if ($(this).val() == "Index"){
+				    	console.log('Show Index')
+				    	$('.all').hide();
+				        $('.index').show();
+				    }else if ($(this).val() == "IDP"){
+				    	console.log('Show IDP')
+				    	$('.all').hide();
+				        $('.idp').show();
+				    }
+				});
+
+				$('#openid').change(function(){
+					console.log('Open-Id')
+				    if ($(this).val() == "yes") {
+				        $('.op-id').show();
+				        console.log('show')
+					    } else {
+					        $('op-id').hide();
+					        console.log('hide')
+					    }
+					});
+
+				$('#security_schema').change(function(){
+					console.log('Security Schema Handler')
+				    if ($(this).val() == "yes") {
+				        $('.sec-sch').show();
+				        console.log('show')
+					    } else {
+					        $('.sec-sch').hide();
+					        console.log('hide')
+					    }
+					});
+
+				$('#gen_certificate').change(function(){
+					console.log('Certificate Handler')
+				    if ($(this).val() == "yes") {
+				        $('#allow').show();
+				        console.log('show')
+					    } else {
+					        $('#allow').hide();
+					        console.log('hide')
+					    }
+					});
+
+
+
+
+				});
+		</script>
+	</body>
+</html>

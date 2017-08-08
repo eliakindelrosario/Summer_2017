@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1>Certificate Setup</h1>
+	<hr>
+	{% from "includes/_formhelpers.html" import render_field %}
+	<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.gen_certificate,class_="form-control")}}
+		</div>
+		<div id="allow" style="display:none">
+			<div class="form-group">
+				{{render_field(form.host_ip,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.public_ip,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.use_external_idp,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.fqdn,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.keystore_certificate,class_="form-control")}}
+			</div>
+			<div class="form-group">
+				{{render_field(form.regenerate_certificate,class_="form-control")}}
+			</div>
+		</div>
+		<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
+{% endblock%}
