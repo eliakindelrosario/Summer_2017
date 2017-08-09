@@ -15,7 +15,7 @@ yes_no = [('','Select'),("yes","Yes"), ("no","No")]# yes or no option list
 
 def save_formdata(form):
 	""" Check for post request and from validation.
-		- open json file and append new data 
+		- open json file and add new data 
 	"""
 	if request.method == "POST" and form.validate():
 		result = request.form # get form data
@@ -59,7 +59,7 @@ class Node(Form):
 		validators.EqualTo('password_confirm', message="Password do not match")
 		])
 	password_confirm = PasswordField(data['node'][12]['title'], [validators.data_required(), validators.Length(min=5)])
-	#root_complete = SelectField("Contniue using root pasword for the rest of the installation?",choices=yes_no)
+	#root_complete = BooleanField("Contniue using root pasword for the rest of the installation?"s)
 class Database(Form):
 	""" Create form that requests database information"""
 	is_external = SelectField(data['database'][0]['title'], choices=yes_no)
@@ -151,13 +151,14 @@ def is_authorized(f):
 				return redirect(url_for('select_mirror'))
 	return wrap
 
-	
+##### FIX - 
+
 ################# ROUTES ####################
-# - FIX: attach a session to everypage
+# - FIX: attach a session to everypage. Only one session exit and no check for page to render
 # ESGF Mirror
 @app.route('/', methods=['GET','POST'])
 def select_mirror():
-	# Create form 
+	# Initialize form 
 	form = Mirror(request.form)
 	# check if the request is post and the form is validated
 	if request.method == "POST" and form.validate():
@@ -174,7 +175,7 @@ def select_mirror():
 @app.route('/node', methods=['GET','POST'])
 @is_authorized
 def node_setup():
-	# Create form 
+	# Initialize form 
 	form = Node(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('node.html', form=form)
@@ -185,6 +186,7 @@ def node_setup():
 @app.route('/database',methods=['GET','POST'])
 @is_authorized
 def database_setup():
+	# Initialize form 
 	form = Database(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('database.html', form=form)
@@ -195,6 +197,7 @@ def database_setup():
 @app.route('/tomcat',methods=['GET','POST'])
 @is_authorized
 def tomcat_setup():
+	# Initialize form 
 	form = Tomcat(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('tomcat.html', form=form)
@@ -205,6 +208,7 @@ def tomcat_setup():
 @app.route('/disname',methods=['GET','POST'])
 @is_authorized
 def dn_setup():
+	# Initialize form 
 	form = DistinguishedName(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('disname.html', form=form)
@@ -215,6 +219,7 @@ def dn_setup():
 @app.route('/globus_setup',methods=['GET','POST'])
 @is_authorized
 def globus_setup():
+	# Initialize form 
 	form = Globus(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('globus.html', form=form)
@@ -225,6 +230,7 @@ def globus_setup():
 @app.route('/esgcet',methods=['GET','POST'])
 @is_authorized
 def esgcet_setup():
+	# Initialize form 
 	form = ESGCET(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('esgcet.html', form=form)
@@ -235,13 +241,13 @@ def esgcet_setup():
 @app.route('/certificate',methods=['GET','POST'])
 @is_authorized
 def certificate_setup():
+	# Initialize form 
 	form = Certificate(request.form)
 	if save_formdata(form) != 'success':
 		return render_template('certificate.html', form=form)
 	else:
-		session.clear()
+		session.clear() # destroy session
 		return render_template('complete.html')
 
-# FIX - Remove reference to _message in base.html and delet the file from includes 
 if __name__ == "__main__":
 	app.run(debug=True)
