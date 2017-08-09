@@ -16,25 +16,23 @@ It is advised that python, python-pip, and python-virtualenv already exist in yo
 
 **Note:** **_python version 2.7> and 3 will install pip automatically. Earlier versions may not._**
 
-###### Setting up the application:
+##### Setting up the application:
 For best practice, create a python virtual environment to host the application. This is assuming virtualenv is already in your machine as advised. 
 
 `$ cd ~/where/virtualenv/will/be/located
 $ virtualenv projectenv`
 
-###### Activate the environment:
-Source ~/where/virtualenv/will/be/located/projectenv/bin/activate
+##### Activate the environment:
+'source ~/where/virtualenv/will/be/located/projectenv/bin/activate'
 
 Now clone the application inside this virtual environment after installing the dependencies. 
-###### Install Dependencies: 
+##### Install Dependencies: 
 `$ sudo pip install -r requirements.txt`
 
-Now you can run the application:
+#### Now you can run the application:
 `$ python app.py`
 
-In a Browser visit localhost:5000. 
-
-After filling in the forms, a json file should be available in the current directory of the application. 
+In a Browser visit localhost:5000. After filling in the forms, a json file should be available in the current directory of the application.
 
 ## Usage
 The application uses wtform to create class objects that underline the foundation of the form. Using this method, many forms can be created and rendered easily on templates. For that purpose, this application can be used to create any number of forms to gather information for many purposes. 
@@ -54,9 +52,9 @@ Mirror Selection
 ## Deployment 
 To test deploy this application, follow this tutorial here;
 
-Deployment Guide: https://hostpresto.com/community/tutorials/deploy-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04/
+**Deployment Guide:** https://hostpresto.com/community/tutorials/deploy-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04/
 
-**Note:** **_In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._**
+###### **Note:** **_In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._**
 
 ## Future Work and Improvements
 There are many improvements to be made. Just to name a few:
