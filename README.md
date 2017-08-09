@@ -37,20 +37,20 @@ The application uses wtform to create class objects that underline the foundatio
 The application follows a simple convention. Once the first view is rendered, the user must fill in the form and submit it for validation. Upon validation, a request will be made to the server to return the next view. Same principles apply here. Once that form is filled in, submitted, and validated another request will be made to render the next view. Once all the needed information is submitted, the server will then save the form data it received into a .json file.
 
 The forms will be rendered in a hierarchal order.  
-Mirror Selection
-    Node Configuration 
-        Tomcat Setup
-            Database Setup
-                Globus Setup
-                    Subsystem Selection 
-                        Certification 
+1. Mirror Selection
+2. Node Configuration 
+3. Tomcat Setup
+4. Database Setup
+5. Globus Setup
+6. Subsystem Selection 
+7. Certification 
 
 ## Deployment 
 To test deploy this application, follow this tutorial here;
 
 **Deployment Guide:** https://hostpresto.com/community/tutorials/deploy-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04/
 
-###### Note:_In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._ However, as previously indicated, virtualenv is not a requirement. 
+###### Note: _In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._ However, as previously indicated, virtualenv is not a requirement. 
 
 ## Future Work and Improvements
 There are many improvements to be made. Just to name a few:
