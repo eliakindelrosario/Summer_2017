@@ -37,7 +37,7 @@ The application uses wtform to create class objects that underline the foundatio
 The application follows a simple convention. Once the first view is rendered, the user must fill in the form and submit it for validation. Upon validation, a request will be made to the server to return the next view. Same principles apply here. Once that form is filled in, submitted, and validated another request will be made to render the next view. Once all the needed information is submitted, the server will then save the form data it received into a .json file.
 
 The forms will be rendered in a hierarchal order.  
-Mirror Selection 
+Mirror Selection
     Node Configuration 
         Tomcat Setup
             Database Setup
