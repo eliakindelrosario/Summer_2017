@@ -4,32 +4,33 @@ This project is a simple Python-flask web app that captures form data and saves 
 
 ## Getting Started 
 Before using this application, you will need to install a few dependencies.
-It is advised that python, python-pip, and python-virtualenv already exist in your machine. Note that virtualenv is not required.  
+It is advised that python, python-pip, and python-virtualenv already exist in your machine. 
+###### **Note:that virtualenv is not required.**
 
-###### Ubuntu Installation: 
+#### Ubuntu Installation: 
 
 `$ apt-get install python`
 
-###### CentOs Installation: 
+#### CentOs Installation: 
 
 `$ yum install python`
 
-**Note:** **_python version 2.7> and 3 will install pip automatically. Earlier versions may not._**
+###### **Note:** **_python version 2.7> and 3 will install pip automatically. Earlier versions may not._**
 
-##### Setting up the application:
+#### Setting up the application:
 For best practice, create a python virtual environment to host the application. This is assuming virtualenv is already in your machine as advised. 
 
-`$ cd ~/where/virtualenv/will/be/located
-$ virtualenv projectenv`
+`$ cd ~/where/virtualenv/will/be/located` 
+`$ virtualenv projectenv`
 
-##### Activate the environment:
+#### Activate the environment:
 'source ~/where/virtualenv/will/be/located/projectenv/bin/activate'
 
 Now clone the application inside this virtual environment after installing the dependencies. 
-##### Install Dependencies: 
+#### Install Dependencies: 
 `$ sudo pip install -r requirements.txt`
 
-#### Now you can run the application:
+### Now you can run the application:
 `$ python app.py`
 
 In a Browser visit localhost:5000. After filling in the forms, a json file should be available in the current directory of the application.
@@ -42,12 +43,12 @@ The application follows a simple convention. Once the first view is rendered, th
 
 The forms will be rendered in a hierarchal order.  
 Mirror Selection 
-	-Node Configuration 
-		-Tomcat Setup
-			-Database Setup
-				-Globus Setup
-					-Subsystem Selection 
-						-Certification 
+    Node Configuration 
+        Tomcat Setup
+            Database Setup
+                Globus Setup
+                    Subsystem Selection 
+                        Certification 
 
 ## Deployment 
 To test deploy this application, follow this tutorial here;
