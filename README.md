@@ -6,28 +6,31 @@ This project is a simple Python-flask web app that captures form data and saves 
 Before using this application, you will need to install a few dependencies.
 It is advised that python, python-pip, and python-virtualenv already exist in your machine. Note that virtualenv is not required.  
 
-Ubuntu Installation: 
-$ apt-get install python 
+###### Ubuntu Installation: 
 
-CentOs Installation: 
-$ yum install python 
+`$ apt-get install python`
 
-Note: python version 2.7> and 3 will install pip automatically. Earlier versions may not.  
+###### CentOs Installation: 
 
-Setting up the application:
+`$ yum install python`
+
+**Note:** **_python version 2.7> and 3 will install pip automatically. Earlier versions may not._**
+
+###### Setting up the application:
 For best practice, create a python virtual environment to host the application. This is assuming virtualenv is already in your machine as advised. 
 
-$ cd ~/where/virtualenv/will/be/located
-$ virtualenv projectenv
+`$ cd ~/where/virtualenv/will/be/located
+$ virtualenv projectenv`
 
-Activate the environment:
+###### Activate the environment:
 Source ~/where/virtualenv/will/be/located/projectenv/bin/activate
 
 Now clone the application inside this virtual environment after installing the dependencies. 
-Install Dependencies: $ sudo pip install -r requirements.txt
+###### Install Dependencies: 
+`$ sudo pip install -r requirements.txt`
 
 Now you can run the application:
-$ python app.py
+`$ python app.py`
 
 In a Browser visit localhost:5000. 
 
@@ -50,9 +53,10 @@ Mirror Selection
 
 ## Deployment 
 To test deploy this application, follow this tutorial here;
+
 Deployment Guide: https://hostpresto.com/community/tutorials/deploy-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04/
 
-Note: In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file. 
+**Note:** **_In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._**
 
 ## Future Work and Improvements
 There are many improvements to be made. Just to name a few:
