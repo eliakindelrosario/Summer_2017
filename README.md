@@ -22,6 +22,7 @@ Then activate it by executing this command:
 You should now be inside the virtual environment. Inside the virtual environment, clone the application and install the dependencies. 
 ```
 $ git clone https://github.com/eliakindelrosario/Summer_2017.git
+$ cd Summer_2017
 $ sudo pip install -r requirements.txt
 ```
 Finally, run the application
