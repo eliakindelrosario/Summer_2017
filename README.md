@@ -19,10 +19,10 @@ Then activate it by executing this command:
 
 `source ~/where/virtualenv/will/be/located/projectenv/bin/activate`
 
-You should now be inside the virtual environment. Inside the virtual environment, install the dependencies and clone the application. 
+You should now be inside the virtual environment. Inside the virtual environment, clone the application and install the dependencies. 
 ```
-$ sudo pip install -r requirements.txt
 $ git clone https://github.com/eliakindelrosario/Summer_2017.git
+$ sudo pip install -r requirements.txt
 ```
 Finally, run the application
 `$ python app.py`
