@@ -16,6 +16,7 @@ $ cd ~/where/virtualenv/will/be/located
 $ virtualenv projectenv
 ```
 Then activate it by executing this command:
+
 `source ~/where/virtualenv/will/be/located/projectenv/bin/activate`
 
 You should now be inside the virtual environment. Inside the virtual environment, install the dependencies and clone the application. 
