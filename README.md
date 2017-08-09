@@ -26,6 +26,7 @@ $ cd Summer_2017
 $ sudo pip install -r requirements.txt
 ```
 Finally, run the application
+
 `$ python app.py`
 
 In a Browser visit localhost:5000. After filling in the forms, a json file should be available in the current directory of the application.
