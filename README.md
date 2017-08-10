@@ -8,14 +8,14 @@ It is advised that python, python-pip, and python-virtualenv already exist in yo
 ###### Note: virtualenv is not required and if you install Python version 2.7> and 3.> will install pip automatically. Earlier versions may not.
 
 #### Setting up the Virtual Environment
-For best practice, create a python virtual environment to hold the application. Here I am assuming virtualenv is already in your machine. 
+For best practice, create a python virtual environment to hold the application. Here I am assuming virtualenv is already on your machine. 
 
 Enter a directory where you want your virtual environment to be and create it.
 ```
 $ cd ~/where/virtualenv/will/be/located
 $ virtualenv projectenv
 ```
-Then activate it by executing this command:
+Then activate the environment by executing this command:
 
 `source ~/where/virtualenv/will/be/located/projectenv/bin/activate`
 
@@ -53,13 +53,11 @@ To test deploy this application, follow this tutorial here;
 
 ###### Note: _In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._ However, as previously indicated, virtualenv is not a requirement. 
 
-## Future Work and Improvements
-There are many improvements to be made. Just to name a few:
--	Populating fields automatically,
--	Session handling for each view,
--	Etc.
+## Improvements
+### **TBA**
 
-For Future works, this application will be integrated into an installer.
+## Future Work
+For Future work, this application will be integrated into the ESGF installer.
 
 
 
