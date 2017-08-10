@@ -8,22 +8,25 @@ It is advised that python, python-pip, and python-virtualenv already exist in yo
 ###### Note: virtualenv is not required and if you install Python version 2.7> and 3.> will install pip automatically. Earlier versions may not.
 
 #### Setting up the Virtual Environment
-For best practice, create a python virtual environment to hold the application. Here I am assuming virtualenv is already in your machine. 
+For best practice, create a python virtual environment to hold the application. Here I am assuming virtualenv is already on your machine. 
 
 Enter a directory where you want your virtual environment to be and create it.
 ```
 $ cd ~/where/virtualenv/will/be/located
 $ virtualenv projectenv
 ```
-Then activate it by executing this command:
+Then activate the environment by executing this command:
+
 `source ~/where/virtualenv/will/be/located/projectenv/bin/activate`
 
-You should now be inside the virtual environment. Inside the virtual environment, install the dependencies and clone the application. 
+You should now be inside the virtual environment. Inside the virtual environment, clone the application and install the dependencies. 
 ```
-$ sudo pip install -r requirements.txt
 $ git clone https://github.com/eliakindelrosario/Summer_2017.git
+$ cd Summer_2017
+$ sudo pip install -r requirements.txt
 ```
 Finally, run the application
+
 `$ python app.py`
 
 In a Browser visit localhost:5000. After filling in the forms, a json file should be available in the current directory of the application.
@@ -35,28 +38,26 @@ The application uses wtform to create class objects that underline the foundatio
 The application follows a simple convention. Once the first view is rendered, the user must fill in the form and submit it for validation. Upon validation, a request will be made to the server to return the next view. Same principles apply here. Once that form is filled in, submitted, and validated another request will be made to render the next view. Once all the needed information is submitted, the server will then save the form data it received into a .json file.
 
 The forms will be rendered in a hierarchal order.  
-Mirror Selection 
-    Node Configuration 
-        Tomcat Setup
-            Database Setup
-                Globus Setup
-                    Subsystem Selection 
-                        Certification 
+1. Mirror Selection
+2. Node Configuration 
+3. Tomcat Setup
+4. Database Setup
+5. Globus Setup
+6. Subsystem Selection 
+7. Certification 
 
 ## Deployment 
 To test deploy this application, follow this tutorial here;
 
 **Deployment Guide:** https://hostpresto.com/community/tutorials/deploy-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04/
 
-###### Note:_In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._ However, as previously indicated, virtualenv is not a requirement. 
+###### Note: _In the requirements.txt files, gunicorn and virtualenv are being installed. It is advised that virtualenv is installed before running the requirements.txt file._ However, as previously indicated, virtualenv is not a requirement. 
 
-## Future Work and Improvements
-There are many improvements to be made. Just to name a few:
--	Populating fields automatically,
--	Session handling for each view,
--	Etc.
+## Improvements
+### **TBA**
 
-For Future works, this application will be integrated into an installer.
+## Future Work
+For Future work, this application will be integrated into the ESGF installer.
 
 
 
