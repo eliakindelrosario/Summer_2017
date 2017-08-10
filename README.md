@@ -57,8 +57,8 @@ To test deploy this application, follow this tutorial here;
 ### **TBA**
 
 ## Future Work
-- Complete network.py to pre-populate some form fields.
-- Integrated application with the ESGF installer.
+[] Complete network.py to pre-populate some form fields.
+[] Integrated application with the ESGF installer.
 
 
 
